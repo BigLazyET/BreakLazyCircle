@@ -1,0 +1,11 @@
+20240623
+1. 新建项目，拖入Sprites资源，并进行Sprites Editor编辑（可以自己手动编辑或者用自定义个菜单工具自动编辑：EditorHelper->SliceSprites）
+2. 利用 Tile Palette进行构建当前场景地图，采用Rule Tile, Advanced Rule Tile工具，但是无法满足强行翻转绘制tile的功能，所以加入了CustomRuleTile的实现
+
+20240628
+1. 重新认识Rule Tile，CustomRule的实现标记成[Obsolete]，还是采用原生的功能
+2. 创建各个图层的Tilemap，并设置Sorting Layers
+3. 粗略的绘制地图
+4. 创建一个MenuItem，用于切分sprites: EditHelper -> (New)SliceSprites
+5. 问题：sprite的pivot设置影响从Palette中选择sprite进行绘制的时候，在所处的单元格是不是能紧贴的问题！
+Tips: 选择sprite绘制地图时，可以按键盘上的 [键 进行旋转sprite，按shift+[建可以镜像旋转，特别有用
