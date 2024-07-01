@@ -42,3 +42,10 @@ root = true
 [*]
 charset = utf-8
 ```
+
+## 20240701
+1. 创建Animations和AnimationControllers，附带着重命名sprites，以更好的标记哪些sprite是用作哪些Animation的
+> Animation窗口可以点击最后竖着的三个点，标记显示出Sample Rate，以用来调整采样率 
+* 24 FPS：适用于电影级别的动画，通常用于电影和高质量动画。
+* 30 FPS：游戏中常用的采样率，适用于大多数情况。
+* 60 FPS：高帧率动画，适用于需要非常平滑的动画效果。
