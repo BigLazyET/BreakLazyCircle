@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_10
+      name: Fall_10
       rect:
         serializedVersion: 2
         x: 0
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_11
+      name: Fall_11
       rect:
         serializedVersion: 2
         x: 64
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_12
+      name: Fall_12
       rect:
         serializedVersion: 2
         x: 128
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_13
+      name: Land_13
       rect:
         serializedVersion: 2
         x: 0
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_14
+      name: Land_14
       rect:
         serializedVersion: 2
         x: 64
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_15
+      name: Land_15
       rect:
         serializedVersion: 2
         x: 128
@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_16
+      name: WallSlide_16
       rect:
         serializedVersion: 2
         x: 0
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_21
+      name: Move_21
       rect:
         serializedVersion: 2
         x: 0
@@ -585,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_22
+      name: Move_22
       rect:
         serializedVersion: 2
         x: 64
@@ -606,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_23
+      name: Move_23
       rect:
         serializedVersion: 2
         x: 128
@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_24
+      name: Move_24
       rect:
         serializedVersion: 2
         x: 192
@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_25
+      name: Move_25
       rect:
         serializedVersion: 2
         x: 256
@@ -669,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_26
+      name: Move_26
       rect:
         serializedVersion: 2
         x: 320
@@ -690,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_27
+      name: Move_27
       rect:
         serializedVersion: 2
         x: 384
@@ -711,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_28
+      name: Move_28
       rect:
         serializedVersion: 2
         x: 448
@@ -732,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_29
+      name: Move_29
       rect:
         serializedVersion: 2
         x: 512
@@ -753,7 +753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_30
+      name: Move_30
       rect:
         serializedVersion: 2
         x: 576
@@ -774,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_31
+      name: Move_31
       rect:
         serializedVersion: 2
         x: 640
@@ -795,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_32
+      name: Move_32
       rect:
         serializedVersion: 2
         x: 704
@@ -1005,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_42
+      name: WallClimb_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1026,7 +1026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_43
+      name: WallClimb_43
       rect:
         serializedVersion: 2
         x: 64
@@ -1047,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_44
+      name: WallClimb_44
       rect:
         serializedVersion: 2
         x: 128
@@ -1068,7 +1068,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_45
+      name: WallClimb_45
       rect:
         serializedVersion: 2
         x: 192
@@ -1089,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_46
+      name: WallClimb_46
       rect:
         serializedVersion: 2
         x: 256
@@ -1110,7 +1110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_47
+      name: WallClimb_47
       rect:
         serializedVersion: 2
         x: 320
@@ -1131,7 +1131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_48
+      name: WallClimb_48
       rect:
         serializedVersion: 2
         x: 384
@@ -1152,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_49
+      name: WallClimb_49
       rect:
         serializedVersion: 2
         x: 448
@@ -1173,7 +1173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_50
+      name: WallClimb_50
       rect:
         serializedVersion: 2
         x: 512
@@ -1194,7 +1194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_51
+      name: WallClimb_51
       rect:
         serializedVersion: 2
         x: 576
@@ -1215,7 +1215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_52
+      name: WallClimb_52
       rect:
         serializedVersion: 2
         x: 640
@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_53
+      name: WallClimb_53
       rect:
         serializedVersion: 2
         x: 704
@@ -1257,7 +1257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_54
+      name: CrouchIdle_54
       rect:
         serializedVersion: 2
         x: 0
@@ -1278,7 +1278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_55
+      name: CrouchIdle_55
       rect:
         serializedVersion: 2
         x: 64
@@ -1299,7 +1299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_56
+      name: CrouchIdle_56
       rect:
         serializedVersion: 2
         x: 128
@@ -1320,7 +1320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_57
+      name: CrouchIdle_57
       rect:
         serializedVersion: 2
         x: 192
@@ -1341,7 +1341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_58
+      name: CrouchMove_58
       rect:
         serializedVersion: 2
         x: 0
@@ -1362,7 +1362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_59
+      name: CrouchMove_59
       rect:
         serializedVersion: 2
         x: 64
@@ -1383,7 +1383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_60
+      name: CrouchMove_60
       rect:
         serializedVersion: 2
         x: 128
@@ -1404,7 +1404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_61
+      name: CrouchMove_61
       rect:
         serializedVersion: 2
         x: 192
@@ -1425,7 +1425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_62
+      name: CrouchMove_62
       rect:
         serializedVersion: 2
         x: 256
@@ -1446,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_63
+      name: CrouchMove_63
       rect:
         serializedVersion: 2
         x: 320
@@ -1467,7 +1467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_64
+      name: CrouchMove_64
       rect:
         serializedVersion: 2
         x: 384
@@ -1488,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_65
+      name: CrouchMove_65
       rect:
         serializedVersion: 2
         x: 448
@@ -1509,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_66
+      name: CrouchMove_66
       rect:
         serializedVersion: 2
         x: 512
@@ -1530,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_67
+      name: CrouchMove_67
       rect:
         serializedVersion: 2
         x: 576
@@ -1551,7 +1551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_68
+      name: CrouchMove_68
       rect:
         serializedVersion: 2
         x: 640
@@ -1572,7 +1572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_69
+      name: CrouchMove_69
       rect:
         serializedVersion: 2
         x: 704
@@ -1603,33 +1603,48 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      CrouchIdle_54: 1260957643
+      CrouchIdle_55: 1902565663
+      CrouchIdle_56: -180133783
+      CrouchIdle_57: 1287921990
+      CrouchMove_58: 1851136114
+      CrouchMove_59: 214909193
+      CrouchMove_60: 815675809
+      CrouchMove_61: 269285859
+      CrouchMove_62: 602918411
+      CrouchMove_63: 303806749
+      CrouchMove_64: -1951769979
+      CrouchMove_65: 1751505904
+      CrouchMove_66: -1290856143
+      CrouchMove_67: 282580671
+      CrouchMove_68: 1448036536
+      CrouchMove_69: 2061567563
+      Fall_10: 332198633
+      Fall_11: 1378716169
+      Fall_12: 2035946609
       Idle_0: -1799041648
       Idle_1: -1802954942
       Idle_2: -1303784752
       Idle_3: 531171787
-      PlayerMovement_10: 332198633
-      PlayerMovement_11: 1378716169
-      PlayerMovement_12: 2035946609
-      PlayerMovement_13: 428968590
-      PlayerMovement_14: -602483584
-      PlayerMovement_15: -1788791615
-      PlayerMovement_16: -922416648
+      Land_13: 428968590
+      Land_14: -602483584
+      Land_15: -1788791615
+      Move_21: 168397627
+      Move_22: 555049373
+      Move_23: 1929606199
+      Move_24: -16589246
+      Move_25: -1727386299
+      Move_26: 1443344355
+      Move_27: -969309851
+      Move_28: 400466507
+      Move_29: -1737336599
+      Move_30: -1961501226
+      Move_31: 1206773222
+      Move_32: 562780161
       PlayerMovement_17: -600575221
       PlayerMovement_18: -582045463
       PlayerMovement_19: 622186769
       PlayerMovement_20: 1909055970
-      PlayerMovement_21: 168397627
-      PlayerMovement_22: 555049373
-      PlayerMovement_23: 1929606199
-      PlayerMovement_24: -16589246
-      PlayerMovement_25: -1727386299
-      PlayerMovement_26: 1443344355
-      PlayerMovement_27: -969309851
-      PlayerMovement_28: 400466507
-      PlayerMovement_29: -1737336599
-      PlayerMovement_30: -1961501226
-      PlayerMovement_31: 1206773222
-      PlayerMovement_32: 562780161
       PlayerMovement_33: 1751089452
       PlayerMovement_34: -565220180
       PlayerMovement_35: -431088928
@@ -1640,39 +1655,24 @@ TextureImporter:
       PlayerMovement_4: -1482801439
       PlayerMovement_40: 890337637
       PlayerMovement_41: -1788922495
-      PlayerMovement_42: 1726496347
-      PlayerMovement_43: 22520306
-      PlayerMovement_44: -1354718755
-      PlayerMovement_45: -1899830298
-      PlayerMovement_46: -226230963
-      PlayerMovement_47: 1214076592
-      PlayerMovement_48: -292147776
-      PlayerMovement_49: -1596309068
       PlayerMovement_5: -823030620
-      PlayerMovement_50: -1996529253
-      PlayerMovement_51: 143280141
-      PlayerMovement_52: 2094417491
-      PlayerMovement_53: -864873926
-      PlayerMovement_54: 1260957643
-      PlayerMovement_55: 1902565663
-      PlayerMovement_56: -180133783
-      PlayerMovement_57: 1287921990
-      PlayerMovement_58: 1851136114
-      PlayerMovement_59: 214909193
       PlayerMovement_6: -1041100803
-      PlayerMovement_60: 815675809
-      PlayerMovement_61: 269285859
-      PlayerMovement_62: 602918411
-      PlayerMovement_63: 303806749
-      PlayerMovement_64: -1951769979
-      PlayerMovement_65: 1751505904
-      PlayerMovement_66: -1290856143
-      PlayerMovement_67: 282580671
-      PlayerMovement_68: 1448036536
-      PlayerMovement_69: 2061567563
       PlayerMovement_7: 644407229
       PlayerMovement_8: -1250925705
       PlayerMovement_9: 300834715
+      WallClimb_42: 1726496347
+      WallClimb_43: 22520306
+      WallClimb_44: -1354718755
+      WallClimb_45: -1899830298
+      WallClimb_46: -226230963
+      WallClimb_47: 1214076592
+      WallClimb_48: -292147776
+      WallClimb_49: -1596309068
+      WallClimb_50: -1996529253
+      WallClimb_51: 143280141
+      WallClimb_52: 2094417491
+      WallClimb_53: -864873926
+      WallSlide_16: -922416648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
