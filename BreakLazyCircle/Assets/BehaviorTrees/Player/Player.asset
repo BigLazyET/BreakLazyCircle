@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 6759589770224205825
+  nodes:
+  - rid: 6759589770224205825
+  - rid: 6759589770224205905
+  - rid: 6759589770224205906
+  - rid: 6759589770224205909
+  blackboard:
+    keys: []
+  viewPosition: {x: 488, y: 359, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6759589770224205825
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: b6bcd7b4-6132-4240-89e5-4c30f46a6b6e
+        position: {x: -450, y: -900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 6759589770224205905
+    - rid: 6759589770224205905
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: d1b8f111d843871478e9b42681321c97
+        position: {x: -450, y: -675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759589770224205906
+    - rid: 6759589770224205906
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 8421dc659c0167f4eb9d82fac806cada
+        position: {x: -675, y: -450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759589770224205909
+    - rid: 6759589770224205909
+      type: {class: SubTree, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5b49f71f05a52614ca74de46a79b475e
+        position: {x: -675, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
+        treeInstance: {fileID: 0}

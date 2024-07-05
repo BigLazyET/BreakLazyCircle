@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Grounded
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 6759589770224205908
+  nodes:
+  - rid: 6759589770224205908
+  - rid: 6759589770224205911
+  blackboard:
+    keys: []
+  viewPosition: {x: 593, y: 300, z: 0}
+  viewScale: {x: 1, y: 1, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 6759589770224205908
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 9816a2fd-23c8-4815-a0de-1ba113d0a8a3
+        position: {x: -315, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: -2
+    - rid: 6759589770224205911
+      type: {class: NoAbilityInput, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 1c0550fcf7dc2c941b5596f2845f0081
+        position: {x: -432, y: -53}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0

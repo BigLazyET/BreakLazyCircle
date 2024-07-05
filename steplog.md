@@ -49,3 +49,6 @@ charset = utf-8
 * 24 FPS：适用于电影级别的动画，通常用于电影和高质量动画。
 * 30 FPS：游戏中常用的采样率，适用于大多数情况。
 * 60 FPS：高帧率动画，适用于需要非常平滑的动画效果。
+2. 导入已打包好了的unity package: behaviour-tree-editor
+[Unity Behavior Tree](https://www.thekiwicoder.com/behaviour-tree)
+> Assets -> Import Package -> Custom Package
