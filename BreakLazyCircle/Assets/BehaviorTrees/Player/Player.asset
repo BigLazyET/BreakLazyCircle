@@ -17,12 +17,13 @@ MonoBehaviour:
   nodes:
   - rid: 6759589770224205825
   - rid: 6759589770224205905
-  - rid: 6759589770224205906
   - rid: 6759589770224205909
+  - rid: 7446223863449387008
+  - rid: 7446223863449387081
   blackboard:
     keys: []
-  viewPosition: {x: 488, y: 359, z: 0}
-  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  viewPosition: {x: 273.5, y: 857.5, z: 0}
+  viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
@@ -31,7 +32,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: b6bcd7b4-6132-4240-89e5-4c30f46a6b6e
-        position: {x: -450, y: -900}
+        position: {x: 300, y: -1125}
         blackboard:
           keys: []
         description: 
@@ -43,34 +44,44 @@ MonoBehaviour:
       data:
         started: 0
         guid: d1b8f111d843871478e9b42681321c97
-        position: {x: -450, y: -675}
+        position: {x: 300, y: -900}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         children:
-        - rid: 6759589770224205906
-    - rid: 6759589770224205906
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 8421dc659c0167f4eb9d82fac806cada
-        position: {x: -675, y: -450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759589770224205909
+        - rid: 7446223863449387008
     - rid: 6759589770224205909
       type: {class: SubTree, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         started: 0
         guid: 5b49f71f05a52614ca74de46a79b475e
-        position: {x: -675, y: -225}
+        position: {x: 255, y: -450}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
         treeInstance: {fileID: 0}
+    - rid: 7446223863449387008
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 3e1bbf55628f9364da54205ce9e068af
+        position: {x: 75, y: -675}
+        blackboard:
+          keys: []
+        description: Grounded Sequencer Node
+        drawGizmos: 0
+        children: []
+    - rid: 7446223863449387081
+      type: {class: GroundedNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 05eae90d8fd15384891048fe50fcff90
+        position: {x: -120, y: -450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0

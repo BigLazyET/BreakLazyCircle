@@ -3,7 +3,7 @@ guid: 659a0db142290b94daeb54e98305dbb5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -1592,6 +1592,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Empty
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbffe86b8d19d1946b8bb6235cd2d611
+      internalID: -1635511508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1619,6 +1640,7 @@ TextureImporter:
       CrouchMove_67: 282580671
       CrouchMove_68: 1448036536
       CrouchMove_69: 2061567563
+      Empty: -1635511508
       Fall_10: 332198633
       Fall_11: 1378716169
       Fall_12: 2035946609

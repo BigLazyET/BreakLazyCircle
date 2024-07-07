@@ -16,7 +16,6 @@ MonoBehaviour:
     rid: 6759589770224205908
   nodes:
   - rid: 6759589770224205908
-  - rid: 6759589770224205911
   blackboard:
     keys: []
   viewPosition: {x: 593, y: 300, z: 0}
@@ -38,14 +37,3 @@ MonoBehaviour:
         drawGizmos: 0
         child:
           rid: -2
-    - rid: 6759589770224205911
-      type: {class: NoAbilityInput, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 1c0550fcf7dc2c941b5596f2845f0081
-        position: {x: -432, y: -53}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        invert: 0

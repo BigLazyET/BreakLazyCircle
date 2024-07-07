@@ -4,7 +4,7 @@ using UnityEngine;
 using TheKiwiCoder;
 
 [System.Serializable]
-public class NoAbilityInput : ConditionNode
+public class GroundedNode : ConditionNode
 {
     protected override bool CheckCondition() {
         return false;
