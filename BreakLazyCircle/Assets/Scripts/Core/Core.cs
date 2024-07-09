@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace BreakLazyCircle.CoreSystem
@@ -29,6 +30,26 @@ namespace BreakLazyCircle.CoreSystem
             if (CoreComponents.Contains(coreComponent))
                 return;
             CoreComponents.Add(coreComponent);
+        }
+
+        public T GetCoreComponent<T>() where T : CoreComponent
+        {
+            var coreComponent = CoreComponents.OfType<T>().FirstOrDefault();
+            if (coreComponent)
+                return coreComponent;
+
+            coreComponent = GetComponentInChildren<T>();
+            if (coreComponent)
+                return coreComponent;
+
+            Debug.LogError($"{typeof(T)} not found on {Root?.name}");
+            return null;
+        }
+
+        public T GetCoreComponent<T>(ref T value) where T : CoreComponent
+        {
+            value = GetCoreComponent<T>();
+            return value;
         }
     }
 }

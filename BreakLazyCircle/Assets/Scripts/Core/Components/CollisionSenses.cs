@@ -4,8 +4,6 @@ namespace BreakLazyCircle.CoreSystem
 {
     public class CollisionSenses : CoreComponent
     {
-        private Movement Movement => core.GetComponent<Movement>();
-
         [SerializeField] private Transform groundCheck;
         [SerializeField] private Transform wallCheck;
         [SerializeField] private Transform ceilingCheck;
@@ -16,6 +14,10 @@ namespace BreakLazyCircle.CoreSystem
         [SerializeField] private float wallCheckDistance;
 
         [SerializeField] private LayerMask whatIsGround;
+
+        private Movement Movement;
+
+        private Vector2 gizmosWorkspace;
 
         // 并不是检测头顶碰撞，是检测什么情况你应该要蹲下去，很显然当碰撞点远小于你头顶的时候，你就应该蹲下去
         public bool IsCeiling => Physics2D.OverlapCircle(ceilingCheck.position, groundCheckRadius, whatIsGround);
@@ -39,9 +41,30 @@ namespace BreakLazyCircle.CoreSystem
             return point;
         }
 
+        protected override void Awake()
+        {
+            base.Awake();
+
+            if (core == null)
+                Debug.LogError($"core is null");
+            Movement = core.GetCoreComponent<Movement>();
+        }
+
         private void OnDrawGizmosSelected()
         {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+            Gizmos.DrawWireSphere(ceilingCheck.position, groundCheckRadius);
+
+            if (core == null)
+                Debug.LogError($"core is null");
+            Movement = Movement ?? core.GetCoreComponent<Movement>();
             
+
+            Gizmos.color = Color.red;
+            gizmosWorkspace.Set(wallCheckDistance * Movement.FacingDirection, 0);
+            Debug.Log($"gizmos workspace: {gizmosWorkspace.x}-{gizmosWorkspace.y}");
+            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)gizmosWorkspace);
         }
     }
 }
