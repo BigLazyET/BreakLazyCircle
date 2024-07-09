@@ -52,3 +52,34 @@ charset = utf-8
 2. 导入已打包好了的unity package: behaviour-tree-editor
 [Unity Behavior Tree](https://www.thekiwicoder.com/behaviour-tree)
 > Assets -> Import Package -> Custom Package
+
+## 20240707
+行为树设计
+
+## 20240708
+CoreComponent
+
+## 20240709
+1. 编辑器模式下，默认情况不会调用Awake和Start方法的
+> 可以给类添加[ExecuteInEditMode] attribute来确保Awake和Start方法在编辑器模式下也能被调用
+
+<font color="red">这个解释了在OnDrawGizmosSelected和OnDrawGizmos方法里获取父组件为null的情形（因为一般获取父组件在Awake和Start方法中，而编辑器模式-场景模式下这两个方法不会被调用，所以父组件永远为null）</font>
+
+2. Layer和Sorting Layer的区别
+* Layer：用于物理交互、碰撞检测、摄像机渲染和光照管理
+    * 碰撞检测：通过 Layer，你可以控制哪些对象可以相互碰撞。例如，可以设置玩家角色只与敌人和地形碰撞，而不与背景碰撞
+    * 摄像机渲染：你可以设置摄像机只渲染特定 Layer 的对象。例如，可以创建一个 UI 层，只让 UI 摄像机渲染这个层
+    * 光照和阴影：可以通过 Layer 控制哪些对象受到光照影响或投射阴影
+* Sorting Layer：用于控制 2D 对象的渲染顺序，决定了哪些对象在渲染时显示在前面，哪些显示在后面
+
+3. 场景中角色前面有一个闪电的标记
+> 可以通过在场景视图的右上角，点击 General 菜单，调整3D Icons的配置来消除
+
+4. 如何决定组件之间的依赖顺序
+* 使用 Script Execution Order，选择 Edit > Project Settings > Script Execution Order
+* 在 Awake 和 Start 方法中初始化
+* 使用事件或委托
+
+5. 脚本执行顺序
+* 使用[DefaultExecutionOrder] attribute
+* 创建一个自定义属性 ExecutionOrderAttribute，用于标记组件的执行顺序 
