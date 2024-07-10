@@ -15,7 +15,7 @@ namespace BreakLazyCircle.CoreSystem
 
         [SerializeField] private LayerMask whatIsGround;
 
-        private Movement Movement;
+        private Movement Movement => core.GetCoreComponent<Movement>();
 
         private Vector2 gizmosWorkspace;
 
@@ -40,30 +40,15 @@ namespace BreakLazyCircle.CoreSystem
             var point = Physics2D.Raycast(ledgeHorizontalCheck.position + (Vector3)workspace, Vector2.down, ledgeHorizontalCheck.position.y - wallCheck.position.y + offset, whatIsGround);
             return point;
         }
-
-        protected override void Awake()
-        {
-            base.Awake();
-
-            if (core == null)
-                Debug.LogError($"core is null");
-            Movement = core.GetCoreComponent<Movement>();
-        }
-
+        
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-            Gizmos.DrawWireSphere(ceilingCheck.position, groundCheckRadius);
-
-            if (core == null)
-                Debug.LogError($"core is null");
-            Movement = Movement ?? core.GetCoreComponent<Movement>();
-            
+            Gizmos.DrawWireSphere(ceilingCheck.position, groundCheckRadius); 
 
             Gizmos.color = Color.red;
-            gizmosWorkspace.Set(wallCheckDistance * Movement.FacingDirection, 0);
-            Debug.Log($"gizmos workspace: {gizmosWorkspace.x}-{gizmosWorkspace.y}");
+            gizmosWorkspace.Set(wallCheckDistance, 0);  // 不全面，应该要考虑 Movement.FacingDirection
             Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)gizmosWorkspace);
         }
     }

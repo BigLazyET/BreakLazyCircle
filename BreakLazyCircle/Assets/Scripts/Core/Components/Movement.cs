@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BreakLazyCircle.CoreSystem
@@ -14,8 +15,13 @@ namespace BreakLazyCircle.CoreSystem
         public Vector2 CurrentVelocity { get; private set; }
         private Vector2 velocityWorkspace;
 
+        // Gizmos
+        private Vector2 gizmosWorkspace;
+
         protected override void Awake()
         {
+            Debug.Log("Movement Awake");
+
             base.Awake();
 
             rb2D = core.Root.GetComponent<Rigidbody2D>();
@@ -26,6 +32,8 @@ namespace BreakLazyCircle.CoreSystem
 
         public override void LogicUpdate()
         {
+            Debug.Log("Movement LogicUpdate");
+
             base.LogicUpdate();
 
             CurrentVelocity = rb2D.velocity;

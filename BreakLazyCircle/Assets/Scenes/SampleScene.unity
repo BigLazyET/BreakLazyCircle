@@ -760,7 +760,7 @@ MonoBehaviour:
   ledgeHorizontalCheck: {fileID: 814332971}
   ledgeVerticalCheck: {fileID: 0}
   groundCheckRadius: 0.3
-  wallCheckDistance: 5
+  wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 1532196163}
   - component: {fileID: 1532196162}
   - component: {fileID: 1532196161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6446,7 +6446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviourTree: {fileID: 11400000, guid: b61ef321f695757468dd3217cb532ed0, type: 2}
+  behaviourTree: {fileID: 11400000, guid: c1a395dfda5d2e049b8dda6b9c2b12ef, type: 2}
   tickMode: 2
   startMode: 3
   validate: 1
