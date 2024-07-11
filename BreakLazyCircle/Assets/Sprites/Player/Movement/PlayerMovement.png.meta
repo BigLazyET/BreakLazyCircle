@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_4
+      name: JumpUp1X
       rect:
         serializedVersion: 2
         x: 0
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_5
+      name: JumpUp2X
       rect:
         serializedVersion: 2
         x: 64
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_6
+      name: JumpUp3X
       rect:
         serializedVersion: 2
         x: 128
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_7
+      name: JumpUp1
       rect:
         serializedVersion: 2
         x: 0
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_8
+      name: JumpUp2
       rect:
         serializedVersion: 2
         x: 64
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerMovement_9
+      name: JumpUp3
       rect:
         serializedVersion: 2
         x: 128
@@ -1601,7 +1601,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1648,6 +1648,12 @@ TextureImporter:
       Idle_1: -1802954942
       Idle_2: -1303784752
       Idle_3: 531171787
+      JumpUp1: 644407229
+      JumpUp1X: -1482801439
+      JumpUp2: -1250925705
+      JumpUp2X: -823030620
+      JumpUp3: 300834715
+      JumpUp3X: -1041100803
       Land_13: 428968590
       Land_14: -602483584
       Land_15: -1788791615
@@ -1674,14 +1680,8 @@ TextureImporter:
       PlayerMovement_37: -651290
       PlayerMovement_38: 1325648386
       PlayerMovement_39: 549732055
-      PlayerMovement_4: -1482801439
       PlayerMovement_40: 890337637
       PlayerMovement_41: -1788922495
-      PlayerMovement_5: -823030620
-      PlayerMovement_6: -1041100803
-      PlayerMovement_7: 644407229
-      PlayerMovement_8: -1250925705
-      PlayerMovement_9: 300834715
       WallClimb_42: 1726496347
       WallClimb_43: 22520306
       WallClimb_44: -1354718755

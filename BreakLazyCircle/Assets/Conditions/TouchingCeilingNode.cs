@@ -1,8 +1,9 @@
-using BreakLazyCircle.CoreSystem;
+using UnityEngine;
 using TheKiwiCoder;
+using BreakLazyCircle.CoreSystem;
 
 [System.Serializable]
-public class GroundedNode : ConditionNode
+public class TouchingCeilingNode : ConditionNode
 {
     private CollisionSenses collisionSenses;
 
@@ -11,8 +12,12 @@ public class GroundedNode : ConditionNode
         base.OnStart();
 
         var core = context.transform.GetComponentInChildren<Core>();
+        if (core == null)
+        {
+            Debug.Log("core is null");
+        }
         collisionSenses = core.GetCoreComponent<CollisionSenses>();
     }
 
-    protected override bool CheckCondition() => collisionSenses.IsGround;
+    protected override bool CheckCondition() => collisionSenses.IsCeiling;
 }
