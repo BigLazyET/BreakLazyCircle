@@ -21,27 +21,21 @@ public class PlayerInputHandler : MonoBehaviour
     public float JumpInputStartTime { get; private set; }
     public bool JumpInputStop { get; private set; }
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
-
     public void OnMovementInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
+
+        Debug.Log($"NormInputX: {NormInputX}, NormInputY: {NormInputY}");
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
+            Debug.Log($"Jump INPUT");
+
             JumpInputStart = true;
             JumpInputStartTime = Time.time;
         }

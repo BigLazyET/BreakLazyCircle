@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using System.Collections.Generic;
 using System;
 
 [Obsolete("This method is obsolete. Use unity self-contained Rule Tile instead.", true)]

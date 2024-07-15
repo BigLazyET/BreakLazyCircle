@@ -13,98 +13,53 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   rootNode:
-    rid: 6759589770224205825
+    rid: 7446223994126598216
   nodes:
-  - rid: 6759589770224205825
-  - rid: 6759589770224205905
-  - rid: 7446223863449387008
-  - rid: 7446223863449387081
-  - rid: 6759589860570562897
-  - rid: 6759589907250544711
+  - rid: 7446223994126598216
+  - rid: 7446224036561944654
   blackboard:
     keys:
-    - rid: -2
-  viewPosition: {x: 307, y: 574, z: 0}
-  viewScale: {x: 0.32690176, y: 0.32690176, z: 1}
+    - rid: 7446224036561944576
+    - rid: 7446224036561944577
+  viewPosition: {x: 278, y: 66.5, z: 0}
+  viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 6759589770224205825
+    - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         started: 0
-        guid: b6bcd7b4-6132-4240-89e5-4c30f46a6b6e
-        position: {x: 300, y: -1575}
+        guid: e2e87cd8-0266-4ec4-94a6-88f096c83831
+        position: {x: -195, y: 0}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: 6759589770224205905
-    - rid: 6759589770224205905
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+          rid: 7446224036561944654
+    - rid: 7446224036561944576
+      type: {class: PlayerDataKey, ns: , asm: Assembly-CSharp}
+      data:
+        name: playerData
+        typeName: PlayerData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {fileID: 11400000, guid: 1b364a5c36ed3fa4f929993657698801, type: 2}
+    - rid: 7446224036561944577
+      type: {class: StringKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: currentAnimName
+        typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 
+    - rid: 7446224036561944654
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
       data:
         started: 0
-        guid: d1b8f111d843871478e9b42681321c97
-        position: {x: 300, y: -900}
+        guid: c16c36c2b65b85a489299d38bd62fcd0
+        position: {x: -195, y: 225}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
-        children:
-        - rid: 7446223863449387008
-        - rid: 6759589907250544711
-    - rid: 6759589860570562897
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 3c7d58e586143e94ba631741b86ce260
-        position: {x: 180, y: -450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        message:
-          reference:
-            rid: -2
-          defaultValue: grouned check true...
-    - rid: 6759589907250544711
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: f7f072a717564f944a600c599ef1b51a
-        position: {x: 555.1586, y: -567.56506}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        message:
-          reference:
-            rid: -2
-          defaultValue: ground not check
-    - rid: 7446223863449387008
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 3e1bbf55628f9364da54205ce9e068af
-        position: {x: 75, y: -675}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446223863449387081
-        - rid: 6759589860570562897
-    - rid: 7446223863449387081
-      type: {class: GroundedNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 05eae90d8fd15384891048fe50fcff90
-        position: {x: -120, y: -450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        invert: 0
+        treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
+        treeInstance: {fileID: 0}

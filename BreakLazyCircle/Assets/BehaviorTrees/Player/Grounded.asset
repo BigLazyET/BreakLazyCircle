@@ -24,13 +24,28 @@ MonoBehaviour:
   - rid: 6759589907250544729
   - rid: 6759589907250544731
   - rid: 6759589907250544733
+  - rid: 7446223992868831304
+  - rid: 7446223992868831305
+  - rid: 7446223992868831306
+  - rid: 7446223992868831308
+  - rid: 7446223992868831309
+  - rid: 7446223992868831311
+  - rid: 7446223992868831312
+  - rid: 7446223992868831314
+  - rid: 7446223992868831315
+  - rid: 7446223992868831319
+  - rid: 7446223994435141717
+  - rid: 7446223994435141718
+  - rid: 7446223994435141728
   blackboard:
     keys: []
-  viewPosition: {x: 427, y: 119, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+  viewPosition: {x: 340.5, y: 312, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 6759589770224205908
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -54,7 +69,9 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
-        - rid: 6759589907250544722
+        - rid: 7446223992868831304
+        - rid: 7446223992868831319
+        - rid: 7446223994435141728
     - rid: 6759589907250544722
       type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -136,3 +153,157 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
+    - rid: 7446223992868831304
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5d5c99c04db2b8e45bd989851fdb75db
+        position: {x: -315, y: 225}
+        blackboard:
+          keys: []
+        description: Movement
+        drawGizmos: 0
+        children:
+        - rid: 7446223992868831305
+        - rid: 7446223992868831315
+    - rid: 7446223992868831305
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: c3965b52ef478fb43884ae0cf81b569a
+        position: {x: -435.52502, y: 438.27502}
+        blackboard:
+          keys: []
+        description: xInput
+        drawGizmos: 0
+        children:
+        - rid: 7446223992868831306
+        - rid: 7446223992868831308
+    - rid: 7446223992868831306
+      type: {class: XInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 134676fd337ad1e4097c76fd5e3c49cf
+        position: {x: -527.11804, y: 647.24585}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446223992868831308
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5a0f6b00cb12d8d4cbf739acac0e1d24
+        position: {x: -300, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446223992868831309
+        - rid: 7446223992868831314
+    - rid: 7446223992868831309
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5bd1d0dbae8ffe44fadcb4572f594d34
+        position: {x: -507.00452, y: 882.872}
+        blackboard:
+          keys: []
+        description: CrouchInput
+        drawGizmos: 0
+        children:
+        - rid: 7446223992868831311
+        - rid: 7446223992868831312
+    - rid: 7446223992868831311
+      type: {class: CrouchInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: eb65f16bbc8fa65418f0b52a2031ca00
+        position: {x: -696.7717, y: 1090.6189}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446223992868831312
+      type: {class: CrouchMoveNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 94e8725a478ce814eb335b0bdcca4319
+        position: {x: -447.53827, y: 1094.117}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 7446223992868831314
+      type: {class: MoveNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 85572a4232764af46af9b3ece10cf4b2
+        position: {x: -253.39865, y: 895.60474}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 7446223992868831315
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: f907fb2e2944f8d4cb67f706f22bcefc
+        position: {x: 90, y: 450}
+        blackboard:
+          keys: []
+        description: 'CrouchInput
+
+'
+        drawGizmos: 0
+        children:
+        - rid: 7446223994435141717
+        - rid: 7446223994435141718
+    - rid: 7446223992868831319
+      type: {class: IdleNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 15da20a8c1a00e24eb4f5e69febc4203
+        position: {x: -105, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 7446223994435141717
+      type: {class: CrouchInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 959f89591de8c1a43b9d230b8f7aa057
+        position: {x: -60.13347, y: 680.477}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446223994435141718
+      type: {class: CrouchIdleNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 1f93181ce8f5fd44888f3731af2f1f1f
+        position: {x: 194.34692, y: 669.1084}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 7446223994435141728
+      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 2a61fcb8b999a92488c1135f38d6a072
+        position: {x: 150, y: 225}
+        blackboard:
+          keys: []
+        description: can not behere
+        drawGizmos: 0
+        message:
+          reference:
+            rid: -2
+          defaultValue: 

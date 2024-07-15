@@ -12,10 +12,6 @@ public class TouchingCeilingNode : ConditionNode
         base.OnStart();
 
         var core = context.transform.GetComponentInChildren<Core>();
-        if (core == null)
-        {
-            Debug.Log("core is null");
-        }
         collisionSenses = core.GetCoreComponent<CollisionSenses>();
     }
 

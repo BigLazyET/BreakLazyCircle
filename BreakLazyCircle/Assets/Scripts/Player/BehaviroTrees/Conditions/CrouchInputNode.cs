@@ -1,7 +1,8 @@
 using TheKiwiCoder;
+using UnityEngine;
 
 [System.Serializable]
-public class XInputNode : ConditionNode
+public class CrouchInputNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;
 
@@ -12,5 +13,9 @@ public class XInputNode : ConditionNode
         inputHandler = context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition() => inputHandler.NormInputX == -1 || inputHandler.NormInputX == 1;
+    protected override bool CheckCondition()
+    {
+        Debug.Log($"inputHandler NormInputY: {inputHandler.NormInputY}");
+        return inputHandler.NormInputY == -1;
+    }
 }
