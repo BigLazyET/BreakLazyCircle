@@ -17,31 +17,51 @@ public class PlayerInputHandler : MonoBehaviour
     public int NormInputY { get; private set; }
 
     // Jump Input Data
-    public bool JumpInputStart { get; private set; }
+    public bool JumpInput { get; private set; }
     public float JumpInputStartTime { get; private set; }
-    public bool JumpInputStop { get; private set; }
+
+    // Grab Input Data
+    public bool GrabInput { get; private set; }
+
+    [SerializeField]
+    private float inputHoldTime = 0.2f;
 
     public void OnMovementInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
-
-        Debug.Log($"NormInputX: {NormInputX}, NormInputY: {NormInputY}");
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log($"Jump INPUT");
-
-            JumpInputStart = true;
+            JumpInput = true;
             JumpInputStartTime = Time.time;
         }
         else if (context.canceled)
         {
-            JumpInputStart = false;
+            JumpInput = false;
         }
+    }
+
+    public bool JumpCoolDown() => Time.time >= JumpInputStartTime + inputHoldTime;
+
+    public void OnGrabInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GrabInput = true;
+        }
+        else if (context.canceled)
+        {
+            GrabInput = false;
+        }
+    }
+
+    private void Update()
+    {
+        
     }
 }

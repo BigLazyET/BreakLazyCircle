@@ -6632,6 +6632,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 633580ef-7479-4f53-90b4-5cf179809fd4
     m_ActionName: 'Gamepaly/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1924925337}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnGrabInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 69e8fea1-2de5-4d35-9237-d4c9d36f4d2b
+    m_ActionName: 'Gamepaly/Grab[/Keyboard/ctrl]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gamepaly
@@ -6671,6 +6687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af8d8d995d3a814180e5e5ef2a278b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputHoldTime: 0.2
 --- !u!114 &1924925338
 MonoBehaviour:
   m_ObjectHideFlags: 0

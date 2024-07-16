@@ -10,13 +10,12 @@ public class XInputNode : ConditionNode
     {
         base.OnStart();
 
-        inputHandler = context.transform.GetComponent<PlayerInputHandler>();
+        inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
     protected override bool CheckCondition()
     {
         var normInputX = inputHandler.NormInputX;
-        Debug.Log($"normInputX: {normInputX}");
 
         return normInputX == -1 || normInputX == 1;
     }

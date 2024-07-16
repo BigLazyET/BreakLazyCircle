@@ -10,7 +10,7 @@ public class CrouchInputNode : ConditionNode
     {
         base.OnStart();
 
-        inputHandler = context.transform.GetComponent<PlayerInputHandler>();
+        inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
     protected override bool CheckCondition()
