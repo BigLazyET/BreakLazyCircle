@@ -17,12 +17,22 @@ MonoBehaviour:
   nodes:
   - rid: 7446223994126598216
   - rid: 7446224036561944654
+  - rid: 7446224069450793052
+  - rid: 7446224069450793053
+  - rid: 7446224069450793054
+  - rid: 7446224069450793055
+  - rid: 7446224069450793056
+  - rid: 7446224069450793058
+  - rid: 7446224069450793059
+  - rid: 7446224069450793061
+  - rid: 7446224069450793065
+  - rid: 7446224069450793066
   blackboard:
     keys:
     - rid: 7446224036561944576
     - rid: 7446224036561944577
-  viewPosition: {x: 278, y: 66.5, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 370.5, y: -162, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
@@ -37,7 +47,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 7446224036561944654
+          rid: 7446224069450793052
     - rid: 7446224036561944576
       type: {class: PlayerDataKey, ns: , asm: Assembly-CSharp}
       data:
@@ -56,10 +66,129 @@ MonoBehaviour:
       data:
         started: 0
         guid: c16c36c2b65b85a489299d38bd62fcd0
-        position: {x: -195, y: 225}
+        position: {x: -405, y: 675}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
         treeInstance: {fileID: 0}
+    - rid: 7446224069450793052
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 1fd08144bec682a469aaf1c1bfeb29d1
+        position: {x: -195, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224069450793053
+        - rid: 7446224069450793059
+    - rid: 7446224069450793053
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 11b6b87823106d74e944ff9b30585825
+        position: {x: -520.5, y: 388}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224069450793054
+        - rid: 7446224069450793055
+    - rid: 7446224069450793054
+      type: {class: GroundedNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 0dbd5fe5088dded469d3695439bc4c08
+        position: {x: -812.80005, y: 564.2399}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224069450793055
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: ec331a41cda4d854cb2c42fcd7d7fefa
+        position: {x: -477.80005, y: 543.2399}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224036561944654
+    - rid: 7446224069450793056
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: ddde425ed4b0f6d479fe87c801feb012
+        position: {x: -705.8325, y: 705.39124}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224069450793058
+    - rid: 7446224069450793058
+      type: {class: TouchingCeilingNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 307d217dea13d4741914b7342894db6a
+        position: {x: -720, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 1
+    - rid: 7446224069450793059
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 7511ac27872ed534290d5fa139252dac
+        position: {x: -81.61251, y: 391.2975}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224069450793061
+        - rid: 7446224069450793066
+    - rid: 7446224069450793061
+      type: {class: TouchingWallNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: a5fab938d6eae894bacced3c454f97ee
+        position: {x: -231.71622, y: 559.255}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224069450793065
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 7ff97e26dc6517b41bc153c86d664464
+        position: {x: 15, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: 5ad7f768934275b448e5b8d446867a18, type: 2}
+        treeInstance: {fileID: 0}
+    - rid: 7446224069450793066
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 142a9b253101af54a9a5184befa17c5c
+        position: {x: 7.887665, y: 570.0995}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children: []

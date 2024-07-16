@@ -21,11 +21,12 @@ public class MoveNode : ExtActionNode
     }
 
     protected override void OnStop() {
+        
     }
 
     protected override State OnUpdate() {
         movement.FlipIfNeed(inputHandler.NormInputX);
-        workspace.Set(movement.FacingDirection * inputHandler.NormInputX, 0);
+        workspace.Set(movement.FacingDirection, 0);
         movement.SetVelocity(playerData.movementVelocity, workspace);
         return State.Success;
     }

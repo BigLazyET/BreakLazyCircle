@@ -24,7 +24,7 @@ public class CrouchMoveNode : ExtActionNode
 
     protected override State OnUpdate() {
         movement.FlipIfNeed(inputHandler.NormInputX);
-        workspace.Set(movement.FacingDirection * inputHandler.NormInputX, 0);
+        workspace.Set(movement.FacingDirection, 0);
         movement.SetVelocity(playerData.crouchMovementVelocity, workspace);
         return State.Success;
     }

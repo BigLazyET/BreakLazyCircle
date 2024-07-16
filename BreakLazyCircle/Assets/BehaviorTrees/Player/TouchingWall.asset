@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: TouchingWall
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 7446224069450793063
+  nodes:
+  - rid: 7446224069450793063
+  - rid: 7446224069450793067
+  - rid: 7446224069450793068
+  blackboard:
+    keys: []
+  viewPosition: {x: 249, y: 88, z: 0}
+  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7446224069450793063
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: ae5336c2-d5df-4c66-8429-b08052ea4dd1
+        position: {x: 0, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 7446224069450793067
+    - rid: 7446224069450793067
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 251dc471f5ae20d4fa6400b829211d70
+        position: {x: 6.333748, y: 178.375}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224069450793068
+    - rid: 7446224069450793068
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 60a96d5a3f152784280d3b7506adbf23
+        position: {x: 9.639992, y: 315.25375}
+        blackboard:
+          keys: []
+        description: wall grab
+        drawGizmos: 0
+        children: []
