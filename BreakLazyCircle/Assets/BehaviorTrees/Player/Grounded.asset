@@ -39,8 +39,8 @@ MonoBehaviour:
   - rid: 7446223994435141728
   blackboard:
     keys: []
-  viewPosition: {x: 356, y: 72, z: 0}
-  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  viewPosition: {x: 321, y: 25, z: 0}
+  viewScale: {x: 0.375937, y: 0.375937, z: 1}
   references:
     version: 2
     RefIds:
@@ -143,6 +143,7 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
+        animName: 
     - rid: 6759589907250544733
       type: {class: CrouchIdleNode, ns: , asm: Assembly-CSharp}
       data:
@@ -238,6 +239,7 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
+        animName: crouchMove
     - rid: 7446223992868831314
       type: {class: MoveNode, ns: , asm: Assembly-CSharp}
       data:
@@ -248,6 +250,7 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
+        animName: move
     - rid: 7446223992868831315
       type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:

@@ -87,7 +87,7 @@ namespace BreakLazyCircle.CoreSystem
         public void Flip()
         {
             FacingDirection *= -1;
-            rb2D.transform.Rotate(0f, 280f, 0f);
+            rb2D.transform.Rotate(0f, 180f, 0f);
         }
 
         public Vector2 FindRelativePoint(Vector2 offset)

@@ -1,23 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
+using UnityEngine;
 
 [System.Serializable]
-public class MoveNode : ActionNode
+public class MoveNode : ExtActionNode
 {
-    private NodeProperty<PlayerData> playerData;
+    private PlayerData playerData;
+    private Movement movement;
+    private PlayerInputHandler inputHandler;
+
+    private Vector2 workspace;
 
     protected override void OnStart() {
-        context.animator.SetBool("move", true);
+        base.OnStart();
+
+        playerData = blackboard.GetValue<PlayerData>("playerData");
+        var core = context.transform.GetComponentInChildren<Core>();
+        movement = core.GetCoreComponent<Movement>();
+        inputHandler = context.transform.GetComponent<PlayerInputHandler>();
     }
 
     protected override void OnStop() {
-        context.animator.SetBool("move", false);
     }
 
     protected override State OnUpdate() {
-        
+        movement.FlipIfNeed(inputHandler.NormInputX);
+        workspace.Set(movement.FacingDirection * inputHandler.NormInputX, 0);
+        movement.SetVelocity(playerData.movementVelocity, workspace);
         return State.Success;
     }
 }

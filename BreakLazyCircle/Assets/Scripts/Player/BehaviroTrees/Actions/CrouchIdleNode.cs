@@ -1,6 +1,3 @@
-using TheKiwiCoder;
-using UnityEngine;
-
 [System.Serializable]
 public class CrouchIdleNode : ExtActionNode
 {
