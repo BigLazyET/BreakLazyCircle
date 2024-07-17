@@ -1,9 +1,10 @@
 using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
 
-[System.Serializable]
-public class GroundedNode : ConditionNode
+public class GroundedJumpInputNode : ConditionNode
 {
+    private PlayerInputHandler inputHandler;
+
     private Core core;
     private CollisionSenses collisionSenses;
 
@@ -15,9 +16,8 @@ public class GroundedNode : ConditionNode
 
         core ??= context.transform.GetComponentInChildren<Core>();
         collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
-
-        jumpLeft.Value = 2;
+        inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition() => collisionSenses.IsGround;
+    protected override bool CheckCondition() => inputHandler.JumpInput && jumpLeft.Value > 0 && !collisionSenses.IsCeiling;
 }

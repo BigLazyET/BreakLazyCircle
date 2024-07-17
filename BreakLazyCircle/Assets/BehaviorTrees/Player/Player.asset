@@ -16,24 +16,101 @@ MonoBehaviour:
     rid: 7446223994126598216
   nodes:
   - rid: 7446223994126598216
-  - rid: 7446224036561944654
   - rid: 7446224069450793052
   - rid: 7446224069450793053
   - rid: 7446224069450793054
-  - rid: 7446224069450793055
   - rid: 7446224069450793059
   - rid: 7446224069450793061
   - rid: 7446224069450793065
   - rid: 7446224069450793066
+  - rid: 6759590064706289742
+  - rid: 6759590064706289768
+  - rid: 6759590064706289770
+  - rid: 6759590064706289779
+  - rid: 6759590064706289819
   blackboard:
     keys:
     - rid: 7446224036561944576
     - rid: 7446224036561944577
-  viewPosition: {x: 616, y: -166.5, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+    - rid: 6759590064706289738
+  viewPosition: {x: 576, y: -374, z: 0}
+  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: 6759590064706289738
+      type: {class: IntKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: amountOfJumpLeft
+        typeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 1
+    - rid: 6759590064706289742
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 856923bb5749f8347ad1921856dde999
+        position: {x: -458.03232, y: 564.168}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590064706289768
+    - rid: 6759590064706289768
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: c5796b33b1d6de3459375fa6524e9453
+        position: {x: -687.15216, y: 767.0528}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590064706289819
+        - rid: 6759590064706289770
+    - rid: 6759590064706289770
+      type: {class: JumpNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: a4911183772cf79498bba1da16f52eed
+        position: {x: -585, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animName: inAir
+        jumpLeft:
+          reference:
+            rid: 6759590064706289738
+          defaultValue: 0
+    - rid: 6759590064706289779
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 25e6461aed77f6d4dab55c49dddc55c9
+        position: {x: -349.59396, y: 786.2918}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
+        treeInstance: {fileID: 0}
+    - rid: 6759590064706289819
+      type: {class: GroundedJumpInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 74e8784f49273be44a76eb95f38976ed
+        position: {x: -900, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+        jumpLeft:
+          reference:
+            rid: 6759590064706289738
+          defaultValue: 0
     - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -59,18 +136,6 @@ MonoBehaviour:
         name: currentAnimName
         typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
         value: 
-    - rid: 7446224036561944654
-      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: c16c36c2b65b85a489299d38bd62fcd0
-        position: {x: -405, y: 675}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
-        treeInstance: {fileID: 0}
     - rid: 7446224069450793052
       type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -96,7 +161,7 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 7446224069450793054
-        - rid: 7446224069450793055
+        - rid: 6759590064706289742
     - rid: 7446224069450793054
       type: {class: GroundedNode, ns: , asm: Assembly-CSharp}
       data:
@@ -108,18 +173,6 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         invert: 0
-    - rid: 7446224069450793055
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: ec331a41cda4d854cb2c42fcd7d7fefa
-        position: {x: -477.80005, y: 543.2399}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224036561944654
     - rid: 7446224069450793059
       type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:

@@ -1,8 +1,10 @@
 using TheKiwiCoder;
 
-public class JumpInputNode : ConditionNode
+public class InAirJumpInputNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;
+
+    public NodeProperty<int> jumpLeft;
 
     protected override void OnStart()
     {
@@ -11,5 +13,5 @@ public class JumpInputNode : ConditionNode
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition() => inputHandler.JumpInput && inputHandler.JumpCoolDown();
+    protected override bool CheckCondition() => inputHandler.JumpInput && jumpLeft.Value > 0;
 }

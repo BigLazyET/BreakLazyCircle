@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,13 +19,17 @@ public class PlayerInputHandler : MonoBehaviour
 
     // Jump Input Data
     public bool JumpInput { get; private set; }
+    public bool JumpInputStop { get; private set; } // 短按逻辑
     public float JumpInputStartTime { get; private set; }
 
     // Grab Input Data
     public bool GrabInput { get; private set; }
 
+    // Attack Input Data
+    public bool AttackInput { get; private set; }
+
     [SerializeField]
-    private float inputHoldTime = 0.2f;
+    private float inputHoldTime = 0.2f; // 长按逻辑
 
     public void OnMovementInput(InputAction.CallbackContext context)
     {
@@ -37,16 +42,27 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
+            Debug.Log("jump input in and get true");
             JumpInput = true;
+            JumpInputStop = false;
             JumpInputStartTime = Time.time;
         }
         else if (context.canceled)
         {
-            JumpInput = false;
+            Debug.Log("jump input stop in and get true");
+            JumpInputStop = true;
         }
     }
 
-    public bool JumpCoolDown() => Time.time >= JumpInputStartTime + inputHoldTime;
+    public void ConsumeJumpInput() => JumpInput = false;
+
+    private void CheckJumpInputHoldTime()
+    {
+        if (Time.time > JumpInputStartTime + inputHoldTime)
+        {
+            JumpInput = false;
+        }
+    }
 
     public void OnGrabInput(InputAction.CallbackContext context)
     {
@@ -62,6 +78,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
-        
+        CheckJumpInputHoldTime();
     }
 }

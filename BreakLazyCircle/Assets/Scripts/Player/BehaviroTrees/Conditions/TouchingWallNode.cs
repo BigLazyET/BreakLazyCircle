@@ -11,9 +11,9 @@ public class TouchingWallNode : ConditionNode
     {
         base.OnStart();
 
-        core = context.transform.GetComponentInChildren<Core>();
-        movement = core.GetCoreComponent<Movement>();
-        collisionSenses = core.GetCoreComponent<CollisionSenses>();
+        core ??= context.transform.GetComponentInChildren<Core>();
+        movement ??= core.GetCoreComponent<Movement>();
+        collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
     }
 
     protected override bool CheckCondition()
