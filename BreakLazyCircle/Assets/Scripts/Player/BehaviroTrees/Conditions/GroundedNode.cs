@@ -7,17 +7,22 @@ public class GroundedNode : ConditionNode
     private Core core;
     private CollisionSenses collisionSenses;
 
-    public NodeProperty<int> jumpLeft;
-
     protected override void OnStart()
     {
         base.OnStart();
 
         core ??= context.transform.GetComponentInChildren<Core>();
         collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
-
-        jumpLeft.Value = 2;
     }
 
-    protected override bool CheckCondition() => collisionSenses.IsGround;
+    protected override bool CheckCondition()
+    {
+        var isGrounded = collisionSenses.IsGround;
+        if (isGrounded)
+        {
+            blackboard.SetValue("amountOfJumpLeft", 2);
+            //blackboard.SetValue("isJumpingStage", false);
+        }
+        return isGrounded;
+    }
 }

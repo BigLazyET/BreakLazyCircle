@@ -1,6 +1,4 @@
 using BreakLazyCircle.CoreSystem;
-using TheKiwiCoder;
-using UnityEngine;
 
 [System.Serializable]
 public class MoveNode : ExtActionNode

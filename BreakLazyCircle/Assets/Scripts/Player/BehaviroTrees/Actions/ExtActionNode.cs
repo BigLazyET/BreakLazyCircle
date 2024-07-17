@@ -8,7 +8,6 @@ public class ExtActionNode : ActionNode
 
     protected override void OnStart()
     {
-        Debug.Log("ExtActionNode OnStart");
         var currentAnimName = blackboard.GetValue<string>("currentAnimName");
         if (!string.IsNullOrWhiteSpace(currentAnimName) && currentAnimName != animName)
         {

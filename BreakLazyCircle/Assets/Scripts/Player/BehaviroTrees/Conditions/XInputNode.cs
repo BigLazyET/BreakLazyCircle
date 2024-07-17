@@ -1,5 +1,4 @@
 using TheKiwiCoder;
-using UnityEngine;
 
 [System.Serializable]
 public class XInputNode : ConditionNode

@@ -1,6 +1,7 @@
 using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
 
+[System.Serializable]
 public class TouchingWallNode : ConditionNode
 {
     private Core core;

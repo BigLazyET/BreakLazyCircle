@@ -1,14 +1,14 @@
 using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
+using UnityEngine;
 
+[System.Serializable]
 public class GroundedJumpInputNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;
 
     private Core core;
     private CollisionSenses collisionSenses;
-
-    public NodeProperty<int> jumpLeft;
 
     protected override void OnStart()
     {
@@ -19,5 +19,10 @@ public class GroundedJumpInputNode : ConditionNode
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition() => inputHandler.JumpInput && jumpLeft.Value > 0 && !collisionSenses.IsCeiling;
+    protected override bool CheckCondition()
+    {
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        Debug.Log($"GroundedJumpInputNode jumpLeft: {jumpLeft}");
+        return inputHandler.JumpInput && jumpLeft > 0 && !collisionSenses.IsCeiling;
+    }
 }

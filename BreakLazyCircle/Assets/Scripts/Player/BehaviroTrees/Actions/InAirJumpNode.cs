@@ -1,6 +1,8 @@
 using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
+using UnityEngine;
 
+[System.Serializable]
 public class InAirJumpNode : ExtActionNode
 {
     private PlayerData playerData;
@@ -8,7 +10,6 @@ public class InAirJumpNode : ExtActionNode
     private Movement movement;
     private PlayerInputHandler inputHandler;
 
-    public NodeProperty<int> jumpLeft;
     public NodeProperty<bool> isJumpingStage;
 
     protected override void OnStart()
@@ -21,8 +22,14 @@ public class InAirJumpNode : ExtActionNode
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
 
         inputHandler.ConsumeJumpInput();
-        movement.SetVelocityY(playerData.jumpVelocity);
-        jumpLeft.Value--;
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
         isJumpingStage.Value = true;
+    }
+
+    protected override State OnUpdate()
+    {
+        movement.SetVelocityY(playerData.jumpVelocity);
+        return State.Success;
     }
 }

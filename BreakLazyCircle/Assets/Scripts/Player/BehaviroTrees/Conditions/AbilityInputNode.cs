@@ -1,6 +1,6 @@
-using System;
 using TheKiwiCoder;
 
+[System.Serializable]
 public class AbilityInputNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;

@@ -12,7 +12,6 @@ public class IdleNode : ExtActionNode
 
         var core = context.transform.GetComponentInChildren<Core>();
         movement = core.GetCoreComponent<Movement>();
-        movement.SetVelocityZero();
     }
 
     protected override void OnStop() {

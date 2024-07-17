@@ -1,5 +1,7 @@
 using TheKiwiCoder;
+using UnityEngine;
 
+[System.Serializable]
 public class InAirJumpInputNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;
@@ -13,5 +15,10 @@ public class InAirJumpInputNode : ConditionNode
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition() => inputHandler.JumpInput && jumpLeft.Value > 0;
+    protected override bool CheckCondition()
+    {
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        Debug.Log($"InAirJumpInputNode jumpLeft: {jumpLeft}");
+        return inputHandler.JumpInput && jumpLeft > 0;
+    }
 }
