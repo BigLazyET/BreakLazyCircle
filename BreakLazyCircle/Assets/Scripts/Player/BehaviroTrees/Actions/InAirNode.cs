@@ -1,5 +1,5 @@
 using BreakLazyCircle.CoreSystem;
-using TheKiwiCoder;
+using UnityEngine;
 
 [System.Serializable]
 public class InAirNode : ExtActionNode
@@ -21,7 +21,9 @@ public class InAirNode : ExtActionNode
 
     protected override State OnUpdate()
     {
+        Debug.Log($"movement.CurrentVelocity.x: {movement.CurrentVelocity.x}");
         context.animator.SetFloat("xVelocity", movement.CurrentVelocity.x);
+        Debug.Log($"movement.CurrentVelocity.y: {movement.CurrentVelocity.y}");
         context.animator.SetFloat("yVelocity", movement.CurrentVelocity.y);
 
         var isJumpingStage = blackboard.GetValue<bool>("isJumpingStage");
