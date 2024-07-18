@@ -9,7 +9,6 @@ public class GroundedNode : ConditionNode
     private CollisionSenses collisionSenses;
     private PlayerInputHandler inputHandler;
     private Movement movement;
-    private Player player;
 
     protected override void OnStart()
     {
@@ -19,7 +18,6 @@ public class GroundedNode : ConditionNode
         movement ??= core.GetCoreComponent<Movement>();
         collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
-        player ??= context.transform.GetComponent<Player>();
     }
 
     protected override bool CheckCondition()
@@ -29,8 +27,7 @@ public class GroundedNode : ConditionNode
         {
             if (MathF.Abs(movement.CurrentVelocity.y) <= 0.01f)
             {
-                //blackboard.SetValue("amountOfJumpLeft", 2);
-                player.amountOfJumpLeft = 2;
+                blackboard.SetValue("amountOfJumpLeft", 2);
                 blackboard.SetValue("isJumpingStage", false);
             }
             if (inputHandler.NormInputX == 0)

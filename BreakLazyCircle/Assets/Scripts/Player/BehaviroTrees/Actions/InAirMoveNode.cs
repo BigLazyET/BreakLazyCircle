@@ -22,7 +22,7 @@ public class InAirMoveNode : ExtActionNode
     protected override State OnUpdate()
     {
         movement.FlipIfNeed(inputHandler.NormInputX);
-        movement.SetVelocityX(playerData.Value.movementVelocity * inputHandler.NormInputX);
+        movement.SetVelocityX(playerData.Value.inAirMovementVelocity * inputHandler.NormInputX);
         return State.Success;
     }
 }

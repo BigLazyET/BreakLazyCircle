@@ -9,7 +9,6 @@ public class GroundedJumpInputNode : ConditionNode
 
     private Core core;
     private CollisionSenses collisionSenses;
-    private Player player;
 
     protected override void OnStart()
     {
@@ -18,13 +17,11 @@ public class GroundedJumpInputNode : ConditionNode
         core ??= context.transform.GetComponentInChildren<Core>();
         collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
-        player ??= context.transform.GetComponent<Player>();
     }
 
     protected override bool CheckCondition()
     {
-        var jumpLeft = player.amountOfJumpLeft; //blackboard.GetValue<int>("amountOfJumpLeft");
-        Debug.Log($"GroundedJumpInputNode jumpLeft: {jumpLeft}");
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
         return inputHandler.JumpInput && jumpLeft > 0 && !collisionSenses.IsCeiling;
     }
 }

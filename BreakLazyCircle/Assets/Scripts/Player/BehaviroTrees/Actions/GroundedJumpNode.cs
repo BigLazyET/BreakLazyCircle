@@ -9,7 +9,6 @@ public class GroundedJumpNode : ExtActionNode
     private Core core;
     private Movement movement;
     private PlayerInputHandler inputHandler;
-    private Player player;
 
     protected override void OnStart()
     {
@@ -19,12 +18,10 @@ public class GroundedJumpNode : ExtActionNode
         core ??= context.transform.GetComponentInChildren<Core>();
         movement ??= core.GetCoreComponent<Movement>();
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
-        player ??= context.transform.GetComponent<Player>();
 
         inputHandler.ConsumeJumpInput();
-        //var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
-        //blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
-        player.amountOfJumpLeft -= 1;
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
         blackboard.SetValue("isJumpingStage", true);
     }
 
