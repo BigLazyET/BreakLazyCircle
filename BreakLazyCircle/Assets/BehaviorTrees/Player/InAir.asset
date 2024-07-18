@@ -22,15 +22,57 @@ MonoBehaviour:
   - rid: 7446224093520592978
   - rid: 7446224093520592979
   - rid: 7446224093520592980
+  - rid: 6759590087078182999
+  - rid: 6759590087078183000
+  - rid: 6759590087078183001
   blackboard:
     keys: []
-  viewPosition: {x: 449.5, y: -58, z: 0}
+  viewPosition: {x: 970, y: 286, z: 0}
   viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 6759590087078182999
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: c3eeced274700634383a358482b9e4c1
+        position: {x: -525, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590087078183000
+        - rid: 6759590087078183001
+    - rid: 6759590087078183000
+      type: {class: XInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 535a33b6e6bf9f9418e8819b29b2dc6b
+        position: {x: -724.41364, y: 456.0339}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 6759590087078183001
+      type: {class: InAirMoveNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 8f886f9fcc097724fb4ae4ac30963925
+        position: {x: -376.13324, y: 466.68002}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animName: inAir
+        playerData:
+          reference:
+            rid: -2
+          defaultValue: {fileID: 11400000, guid: 1b364a5c36ed3fa4f929993657698801, type: 2}
     - rid: 7446224093520592974
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -68,6 +110,7 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 7446224093520592978
+        - rid: 6759590087078182999
     - rid: 7446224093520592977
       type: {class: InAirNode, ns: , asm: Assembly-CSharp}
       data:
@@ -88,7 +131,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 3c6b458d00071514f9db1e896dc51b49
-        position: {x: -524.5, y: 239.5}
+        position: {x: -1080, y: 225}
         blackboard:
           keys: []
         description: 
@@ -101,7 +144,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 3ef537d3b8f07874490c228ee10a4393
-        position: {x: -675, y: 450}
+        position: {x: -1230, y: 450}
         blackboard:
           keys: []
         description: 
@@ -116,7 +159,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 2455785e38905484a9ff12bce92b9ce1
-        position: {x: -375, y: 450}
+        position: {x: -930, y: 450}
         blackboard:
           keys: []
         description: 

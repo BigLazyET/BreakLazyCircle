@@ -16,6 +16,11 @@ namespace BreakLazyCircle.CoreSystem
             Root = Root ?? transform.parent.gameObject;
         }
 
+        private void Update()
+        {
+            LogicUpdate();
+        }
+
         public void LogicUpdate()
         {
             foreach (var coreComponent in CoreComponents)
