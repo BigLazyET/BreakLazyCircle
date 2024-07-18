@@ -24,8 +24,9 @@ MonoBehaviour:
     - rid: 7446224036561944576
     - rid: 7446224036561944577
     - rid: 7446224094767874126
-  viewPosition: {x: 712, y: 142, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+    - rid: 6759590087078183012
+  viewPosition: {x: 340.66666, y: -38, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
@@ -41,6 +42,12 @@ MonoBehaviour:
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
         treeInstance: {fileID: 0}
+    - rid: 6759590087078183012
+      type: {class: BooleanKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: isJumpingStage
+        typeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 0
     - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:

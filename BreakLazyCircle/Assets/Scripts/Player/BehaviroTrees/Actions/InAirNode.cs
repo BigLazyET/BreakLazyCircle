@@ -9,8 +9,6 @@ public class InAirNode : ExtActionNode
     private Core core;
     private Movement movement;
 
-    public NodeProperty<bool> isJumpingStage;
-
     protected override void OnStart()
     {
         base.OnStart();
@@ -23,16 +21,17 @@ public class InAirNode : ExtActionNode
 
     protected override State OnUpdate()
     {
-        if(isJumpingStage.Value)
+        var isJumpingStage = blackboard.GetValue<bool>("isJumpingStage");
+        if (isJumpingStage)
         {
             if (inputHandler.JumpInputStop)
             {
                 movement.SetVelocityY(movement.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
-                isJumpingStage.Value = false;
+                blackboard.SetValue("isJumpingStage", false);
             }
             if (movement.CurrentVelocity.y <= 0f)
             {
-                isJumpingStage.Value = false;
+                blackboard.SetValue("isJumpingStage", false);
             }
         }
 

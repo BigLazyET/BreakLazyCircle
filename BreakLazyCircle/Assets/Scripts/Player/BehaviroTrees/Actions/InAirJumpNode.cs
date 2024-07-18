@@ -9,8 +9,7 @@ public class InAirJumpNode : ExtActionNode
     private Core core;
     private Movement movement;
     private PlayerInputHandler inputHandler;
-
-    public NodeProperty<bool> isJumpingStage;
+    private Player player;
 
     protected override void OnStart()
     {
@@ -20,11 +19,13 @@ public class InAirJumpNode : ExtActionNode
         core ??= context.transform.GetComponentInChildren<Core>();
         movement ??= core.GetCoreComponent<Movement>();
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
+        player ??= context.transform.GetComponent<Player>();
 
         inputHandler.ConsumeJumpInput();
-        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
-        blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
-        isJumpingStage.Value = true;
+        //var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        //blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
+        player.amountOfJumpLeft -= 1;
+        blackboard.SetValue("isJumpingStage", true);
     }
 
     protected override State OnUpdate()

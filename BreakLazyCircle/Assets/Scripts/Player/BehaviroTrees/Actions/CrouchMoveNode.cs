@@ -1,5 +1,4 @@
 using BreakLazyCircle.CoreSystem;
-using UnityEngine;
 
 [System.Serializable]
 public class CrouchMoveNode : ExtActionNode
@@ -16,9 +15,6 @@ public class CrouchMoveNode : ExtActionNode
         core ??= context.transform.GetComponentInChildren<Core>();
         movement ??= core.GetCoreComponent<Movement>();
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
-    }
-
-    protected override void OnStop() {
     }
 
     protected override State OnUpdate() {

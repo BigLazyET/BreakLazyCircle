@@ -44,13 +44,11 @@ MonoBehaviour:
   - rid: 7446224093520592972
   blackboard:
     keys: []
-  viewPosition: {x: 894, y: 112, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 555.3333, y: -20, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 6759589770224205908
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -375,7 +373,3 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         animName: inAir
-        isJumpingStage:
-          reference:
-            rid: -2
-          defaultValue: 0
