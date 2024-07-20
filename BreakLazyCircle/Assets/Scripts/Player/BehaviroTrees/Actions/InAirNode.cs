@@ -17,11 +17,8 @@ public class InAirNode : ExtActionNode
 
     protected override State OnUpdate()
     {
-        Debug.Log($"InAirNode y velocity: {movement.CurrentVelocity.y}");
-
-        context.animator.SetFloat("xVelocity", movement.CurrentVelocity.x);
+        context.animator.SetFloat("xVelocity", Mathf.Abs(movement.CurrentVelocity.x));
         context.animator.SetFloat("yVelocity", movement.CurrentVelocity.y);
-
         blackboard.SetValue("inAirLastVelocity", movement.CurrentVelocity);
 
         var isJumpingStage = blackboard.GetValue<bool>("isJumpingStage");

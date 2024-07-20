@@ -45,10 +45,14 @@ MonoBehaviour:
   - rid: 7446224154582319189
   - rid: 7446224154582319227
   - rid: 7446224154582319228
+  - rid: 7446224162651897960
+  - rid: 7446224162651897961
+  - rid: 7446224162651897962
+  - rid: 7446224162651897963
   blackboard:
     keys: []
-  viewPosition: {x: 1103.5, y: 76, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 311.5, y: -52.5, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
@@ -184,6 +188,7 @@ MonoBehaviour:
         description: xInput
         drawGizmos: 0
         children:
+        - rid: 7446224162651897960
         - rid: 7446223992868831306
         - rid: 7446223992868831308
     - rid: 7446223992868831306
@@ -191,7 +196,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 134676fd337ad1e4097c76fd5e3c49cf
-        position: {x: -555, y: 900}
+        position: {x: -600, y: 900}
         blackboard:
           keys: []
         description: 
@@ -221,6 +226,7 @@ MonoBehaviour:
         description: CrouchInput
         drawGizmos: 0
         children:
+        - rid: 7446224162651897962
         - rid: 7446223992868831311
         - rid: 7446223992868831312
     - rid: 7446223992868831311
@@ -271,6 +277,7 @@ MonoBehaviour:
         children:
         - rid: 7446223994435141717
         - rid: 7446223994435141718
+        - rid: 7446224162651897963
     - rid: 7446223992868831319
       type: {class: IdleNode, ns: , asm: Assembly-CSharp}
       data:
@@ -287,7 +294,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 959f89591de8c1a43b9d230b8f7aa057
-        position: {x: -90, y: 900}
+        position: {x: 105, y: 900}
         blackboard:
           keys: []
         description: 
@@ -298,7 +305,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 1f93181ce8f5fd44888f3731af2f1f1f
-        position: {x: 165, y: 900}
+        position: {x: 390, y: 900}
         blackboard:
           keys: []
         description: 
@@ -353,6 +360,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
+        - rid: 7446224162651897961
         - rid: 7446224093520592971
         - rid: 7446224093520592972
     - rid: 7446224093520592971
@@ -360,7 +368,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 4408bdc591c288c42ad1018189b8dd39
-        position: {x: -960, y: 450}
+        position: {x: -840, y: 450}
         blackboard:
           keys: []
         description: 
@@ -412,3 +420,47 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         animName: land
+    - rid: 7446224162651897960
+      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 70168672f7e53b9489d5816d859f44d5
+        position: {x: -826.5, y: 898}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224162651897961
+      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 177b735dda11356429721afeb90a2437
+        position: {x: -1026, y: 448.5}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224162651897962
+      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: ec56dca46bdf4ba45ab61ee3f5a9cf22
+        position: {x: -972, y: 1347.5}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224162651897963
+      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 9c4abf6bc6d07f94594d542b0f412010
+        position: {x: -125.57999, y: 897}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0

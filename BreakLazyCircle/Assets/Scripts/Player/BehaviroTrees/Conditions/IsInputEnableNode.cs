@@ -1,8 +1,8 @@
+using System;
 using TheKiwiCoder;
-using UnityEngine;
 
 [System.Serializable]
-public class XInputNode : ConditionNode
+public class IsInputEnableNode : ConditionNode
 {
     private PlayerInputHandler inputHandler;
 
@@ -15,9 +15,6 @@ public class XInputNode : ConditionNode
 
     protected override bool CheckCondition()
     {
-        var normInputX = inputHandler.NormInputX;
-        Debug.Log($"XInputNode normInputX: {normInputX}");
-
-        return normInputX == -1 || normInputX == 1;
+        return inputHandler.IsInputEnable;
     }
 }

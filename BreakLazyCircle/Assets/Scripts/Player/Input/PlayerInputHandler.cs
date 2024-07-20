@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,13 +30,11 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField]
     private float inputHoldTime = 0.2f; // 长按逻辑
 
-    private bool isInputEnable = true;
+    [HideInInspector]
+    public bool IsInputEnable { get; set; } = true;
 
     public void OnMovementInput(InputAction.CallbackContext context)
     {
-        if (!isInputEnable)
-            return;
-
         RawMovementInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
@@ -45,9 +42,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (!isInputEnable)
-            return;
-
         if (context.started)
         {
             JumpInput = true;
@@ -72,9 +66,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnGrabInput(InputAction.CallbackContext context)
     {
-        if (!isInputEnable)
-            return;
-
         if (context.started)
         {
             GrabInput = true;
@@ -84,10 +75,6 @@ public class PlayerInputHandler : MonoBehaviour
             GrabInput = false;
         }
     }
-
-    public void EnableInput() => isInputEnable = true;
-
-    public void DisableInput() => isInputEnable = false;
 
     private void Update()
     {
