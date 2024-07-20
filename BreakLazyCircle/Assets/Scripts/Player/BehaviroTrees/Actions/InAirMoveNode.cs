@@ -4,20 +4,7 @@ using TheKiwiCoder;
 [System.Serializable]
 public class InAirMoveNode : ExtActionNode
 {
-    private Movement movement;
-    private Core core;
-    private PlayerInputHandler inputHandler;
-
     public NodeProperty<PlayerData> playerData;
-
-    protected override void OnStart()
-    {
-        base.OnStart();
-
-        core ??= context.transform.GetComponentInChildren<Core>();
-        movement ??= core.GetCoreComponent<Movement>();
-        inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
-    }
 
     protected override State OnUpdate()
     {

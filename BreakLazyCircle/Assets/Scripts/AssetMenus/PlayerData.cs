@@ -50,4 +50,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Stun State")]
     public float stunTime = 2f;
+
+    [Header("Land State")]
+    public float hardLandThreshold = 5f;
 }

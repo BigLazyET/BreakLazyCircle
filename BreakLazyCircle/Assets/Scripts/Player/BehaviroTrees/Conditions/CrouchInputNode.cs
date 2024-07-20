@@ -15,6 +15,6 @@ public class CrouchInputNode : ConditionNode
 
     protected override bool CheckCondition()
     {
-        return inputHandler.NormInputY == -1;
+        return inputHandler.NormInputY == -1 && inputHandler.IsInputEnable();
     }
 }

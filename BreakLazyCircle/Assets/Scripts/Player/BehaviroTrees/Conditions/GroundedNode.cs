@@ -25,7 +25,7 @@ public class GroundedNode : ConditionNode
         var isGrounded = collisionSenses.IsGround;
         if (isGrounded)
         {
-            if (MathF.Abs(movement.CurrentVelocity.y) <= 0.01f)
+            if (MathF.Abs(movement.CurrentVelocity.y) < 0.01f)
             {
                 blackboard.SetValue("amountOfJumpLeft", 2);
                 blackboard.SetValue("isJumpingStage", false);

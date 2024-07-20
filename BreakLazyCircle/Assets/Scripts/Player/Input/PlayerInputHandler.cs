@@ -31,8 +31,13 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField]
     private float inputHoldTime = 0.2f; // 长按逻辑
 
+    private bool isInputEnable = true;
+
     public void OnMovementInput(InputAction.CallbackContext context)
     {
+        if (!isInputEnable)
+            return;
+
         RawMovementInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
@@ -40,6 +45,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
+        if (!isInputEnable)
+            return;
+
         if (context.started)
         {
             Debug.Log("jump input in and get true");
@@ -66,6 +74,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnGrabInput(InputAction.CallbackContext context)
     {
+        if (!isInputEnable)
+            return;
+
         if (context.started)
         {
             GrabInput = true;
@@ -75,6 +86,12 @@ public class PlayerInputHandler : MonoBehaviour
             GrabInput = false;
         }
     }
+
+    public void EnableInput() => isInputEnable = true;
+
+    public void DisableInput() => isInputEnable = false;
+
+    public bool IsInputEnable() => isInputEnable;
 
     private void Update()
     {

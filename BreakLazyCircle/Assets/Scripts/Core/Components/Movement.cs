@@ -32,8 +32,6 @@ namespace BreakLazyCircle.CoreSystem
 
         public override void LogicUpdate()
         {
-            Debug.Log("Movement LogicUpdate");
-
             base.LogicUpdate();
 
             CurrentVelocity = rb2D.velocity;

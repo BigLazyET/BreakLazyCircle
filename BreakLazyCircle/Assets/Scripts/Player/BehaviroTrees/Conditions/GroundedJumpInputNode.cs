@@ -22,6 +22,6 @@ public class GroundedJumpInputNode : ConditionNode
     protected override bool CheckCondition()
     {
         var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
-        return inputHandler.JumpInput && jumpLeft > 0 && !collisionSenses.IsCeiling;
+        return inputHandler.JumpInput && jumpLeft > 0 && !collisionSenses.IsCeiling && inputHandler.IsInputEnable();
     }
 }
