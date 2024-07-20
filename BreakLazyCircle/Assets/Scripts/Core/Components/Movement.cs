@@ -20,8 +20,6 @@ namespace BreakLazyCircle.CoreSystem
 
         protected override void Awake()
         {
-            Debug.Log("Movement Awake");
-
             base.Awake();
 
             rb2D = core.Root.GetComponent<Rigidbody2D>();

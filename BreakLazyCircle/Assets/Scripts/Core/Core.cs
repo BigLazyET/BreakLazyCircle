@@ -16,7 +16,12 @@ namespace BreakLazyCircle.CoreSystem
             Root = Root ?? transform.parent.gameObject;
         }
 
-        private void Update()
+        //private void Update()
+        //{
+        //    LogicUpdate();
+        //}
+
+        private void FixedUpdate()
         {
             LogicUpdate();
         }

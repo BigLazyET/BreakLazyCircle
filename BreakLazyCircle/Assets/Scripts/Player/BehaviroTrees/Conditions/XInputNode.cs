@@ -16,6 +16,6 @@ public class XInputNode : ConditionNode
     {
         var normInputX = inputHandler.NormInputX;
 
-        return normInputX == -1 || normInputX == 1 && inputHandler.IsInputEnable();
+        return normInputX == -1 || normInputX == 1;
     }
 }

@@ -16,6 +16,6 @@ public class InAirJumpInputNode : ConditionNode
     protected override bool CheckCondition()
     {
         var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
-        return inputHandler.JumpInput && jumpLeft > 0 && inputHandler.IsInputEnable();
+        return inputHandler.JumpInput && jumpLeft > 0;
     }
 }

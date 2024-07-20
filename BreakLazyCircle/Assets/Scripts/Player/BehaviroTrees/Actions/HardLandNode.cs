@@ -6,10 +6,10 @@ public class HardLandNode : ExtActionNode
 {
     protected override void OnStart()
     {
-        Debug.Log("HardLandNode OnStart");
         base.OnStart();
 
         movement.SetVelocityZero();
+        blackboard.SetValue("inAirLastVelocity", Vector2.zero);
         inputHandler.DisableInput();
     }
 }

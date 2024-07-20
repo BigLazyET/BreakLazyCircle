@@ -23,9 +23,8 @@ public class HardLandedNode : ConditionNode
 
     protected override bool CheckCondition()
     {
-        var currentVelocityY = movement.CurrentVelocity.y;
+        var inAirLastVelocity = blackboard.GetValue<Vector2>("inAirLastVelocity");
         var hardLandThreshold = -blackboard.GetValue<PlayerData>("playerData").hardLandThreshold;
-        Debug.Log($"HardLandedNode CheckCondition currentVelocityY: {currentVelocityY}, hardLandThreshold: {hardLandThreshold}");
-        return currentVelocityY < hardLandThreshold;
+        return inAirLastVelocity.y < hardLandThreshold;
     }
 }

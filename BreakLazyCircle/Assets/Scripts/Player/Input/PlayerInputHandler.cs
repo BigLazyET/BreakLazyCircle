@@ -50,14 +50,12 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (context.started)
         {
-            Debug.Log("jump input in and get true");
             JumpInput = true;
             JumpInputStop = false;
             JumpInputStartTime = Time.time;
         }
         else if (context.canceled)
         {
-            Debug.Log("jump input stop in and get true");
             JumpInputStop = true;
         }
     }
@@ -90,8 +88,6 @@ public class PlayerInputHandler : MonoBehaviour
     public void EnableInput() => isInputEnable = true;
 
     public void DisableInput() => isInputEnable = false;
-
-    public bool IsInputEnable() => isInputEnable;
 
     private void Update()
     {
