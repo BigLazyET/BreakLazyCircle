@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [System.Serializable]
 public class WallJumpNode : ExtActionNode
 {
@@ -13,11 +15,13 @@ public class WallJumpNode : ExtActionNode
         var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
         blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
         blackboard.SetValue("isJumpingStage", true);
+        blackboard.SetValue("grabHoldPosition", Vector3.zero);
     }
 
     protected override State OnUpdate()
     {
-        movement.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, -movement.FacingDirection);
+        movement.Flip();
+        movement.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, movement.FacingDirection);
 
         return State.Success;
     }

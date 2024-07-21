@@ -20,10 +20,15 @@ MonoBehaviour:
   - rid: 7446224173759725571
   - rid: 7446224173759725572
   - rid: 7446224173759725573
+  - rid: 7446224173819494504
+  - rid: 7446224173819494505
+  - rid: 7446224173819494506
+  - rid: 7446224173819494507
+  - rid: 7446224173819494510
   blackboard:
     keys: []
-  viewPosition: {x: 162.5, y: 3, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 288, y: -351, z: 0}
+  viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
@@ -51,14 +56,15 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 7446224173759725571
+        - rid: 7446224173819494506
         - rid: 7446224173759725572
-        - rid: 7446224173759725573
+        - rid: 7446224173819494510
     - rid: 7446224173759725571
       type: {class: TouchingWallNode, ns: , asm: Assembly-CSharp}
       data:
         started: 0
         guid: 17e4433d99e43644183e0592b27cd08d
-        position: {x: -260.54672, y: 427.5631}
+        position: {x: -450, y: 450}
         blackboard:
           keys: []
         description: 
@@ -69,7 +75,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 7e3349cd5c5432446a0fc36e88f7823e
-        position: {x: -81.84391, y: 431.3653}
+        position: {x: -90, y: 450}
         blackboard:
           keys: []
         description: 
@@ -80,9 +86,68 @@ MonoBehaviour:
       data:
         started: 0
         guid: 0c626b515be165740b3393284a438507
-        position: {x: 246.66507, y: 431.3653}
+        position: {x: 420, y: 675}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         animName: wallGrab
+    - rid: 7446224173819494504
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 8e6cd9a585940674e8cede5ddb9c039c
+        position: {x: -15, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224173819494505
+        - rid: 7446224173819494507
+    - rid: 7446224173819494505
+      type: {class: WallJumpInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: dfe12bc2afbda414f88c16ef72fe2904
+        position: {x: -210, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224173819494506
+      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 0a12ee76838bc9848b119adf126cf641
+        position: {x: -270, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224173819494507
+      type: {class: WallJumpNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 6dacdd829cc6ef849b74a4117e270096
+        position: {x: 150, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animName: inAir
+    - rid: 7446224173819494510
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 0ae171cae1854d941b1276e07147c5e6
+        position: {x: 255, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224173819494504
+        - rid: 7446224173759725573
