@@ -14,7 +14,6 @@ public class WallJumpNode : ExtActionNode
         inputHandler.ConsumeJumpInput();
         var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
         blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
-        blackboard.SetValue("isJumpingStage", true);
         blackboard.SetValue("grabHoldPosition", Vector3.zero);
     }
 

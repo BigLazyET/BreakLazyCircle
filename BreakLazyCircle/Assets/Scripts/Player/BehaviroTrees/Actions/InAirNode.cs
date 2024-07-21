@@ -22,20 +22,21 @@ public class InAirNode : ExtActionNode
         blackboard.SetValue("inAirLastVelocity", movement.CurrentVelocity);
         blackboard.SetValue("grabHoldPosition", Vector3.zero);
 
-        var isJumpingStage = blackboard.GetValue<bool>("isJumpingStage");
-        if (isJumpingStage)
+        // 跳跃手感
+        // 根据上升和下降阶段设置：1. Rigidbody.gravityScale 2. Rigidbody.velocity
+        if (movement.CurrentVelocity.y > 0) // 上升阶段
         {
+            // 短按长按跳跃高度不一样
             if (inputHandler.JumpInputStop)
             {
                 movement.SetVelocityY(movement.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
-                blackboard.SetValue("isJumpingStage", false);
-            }
-            if (movement.CurrentVelocity.y <= 0f)
-            {
-                blackboard.SetValue("isJumpingStage", false);
             }
         }
+        else  // 下降阶段
+        {
 
-        return base.OnUpdate();
+        }
+
+        return State.Success;
     }
 }

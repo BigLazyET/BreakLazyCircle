@@ -29,7 +29,6 @@ public class GroundedNode : ConditionNode
             if (MathF.Abs(movement.CurrentVelocity.y) < 0.01f)
             {
                 blackboard.SetValue("amountOfJumpLeft", 2);
-                blackboard.SetValue("isJumpingStage", false);
             }
             if (inputHandler.NormInputX == 0)
                 movement.SetVelocityX(0f);

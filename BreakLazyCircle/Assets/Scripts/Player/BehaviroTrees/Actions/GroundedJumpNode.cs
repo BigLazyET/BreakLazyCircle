@@ -16,7 +16,6 @@ public class GroundedJumpNode : ExtActionNode
         inputHandler.ConsumeJumpInput();
         var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
         blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
-        blackboard.SetValue("isJumpingStage", true);
     }
 
     protected override State OnUpdate()

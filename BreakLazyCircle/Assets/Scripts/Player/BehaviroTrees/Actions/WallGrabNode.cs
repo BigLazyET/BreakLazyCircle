@@ -22,7 +22,6 @@ public class WallGrabNode : ExtActionNode
         context.transform.position = blackboard.GetValue<Vector3>("grabHoldPosition");
         movement.SetVelocityZero();
         blackboard.SetValue("amountOfJumpLeft", 2);
-        blackboard.SetValue("isJumpingStage", false);
         return State.Success;
     }
 }
