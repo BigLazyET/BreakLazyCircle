@@ -13,50 +13,76 @@ MonoBehaviour:
   m_Name: TouchingWall
   m_EditorClassIdentifier: 
   rootNode:
-    rid: 7446224069450793063
+    rid: 7446224173759725569
   nodes:
-  - rid: 7446224069450793063
-  - rid: 7446224069450793067
-  - rid: 7446224069450793068
+  - rid: 7446224173759725569
+  - rid: 7446224173759725570
+  - rid: 7446224173759725571
+  - rid: 7446224173759725572
+  - rid: 7446224173759725573
   blackboard:
     keys: []
-  viewPosition: {x: 249, y: 88, z: 0}
-  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  viewPosition: {x: 162.5, y: 3, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 7446224069450793063
+    - rid: 7446224173759725569
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         started: 0
-        guid: ae5336c2-d5df-4c66-8429-b08052ea4dd1
+        guid: 0d62547d-e188-4d12-8372-83125209d8a2
         position: {x: 0, y: 0}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: 7446224069450793067
-    - rid: 7446224069450793067
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+          rid: 7446224173759725570
+    - rid: 7446224173759725570
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         started: 0
-        guid: 251dc471f5ae20d4fa6400b829211d70
-        position: {x: 6.333748, y: 178.375}
+        guid: 2e62c8c878ad7374483619fd560ed69d
+        position: {x: 0, y: 225}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         children:
-        - rid: 7446224069450793068
-    - rid: 7446224069450793068
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+        - rid: 7446224173759725571
+        - rid: 7446224173759725572
+        - rid: 7446224173759725573
+    - rid: 7446224173759725571
+      type: {class: TouchingWallNode, ns: , asm: Assembly-CSharp}
       data:
         started: 0
-        guid: 60a96d5a3f152784280d3b7506adbf23
-        position: {x: 9.639992, y: 315.25375}
+        guid: 17e4433d99e43644183e0592b27cd08d
+        position: {x: -260.54672, y: 427.5631}
         blackboard:
           keys: []
-        description: wall grab
+        description: 
         drawGizmos: 0
-        children: []
+        invert: 0
+    - rid: 7446224173759725572
+      type: {class: GrabInputNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 7e3349cd5c5432446a0fc36e88f7823e
+        position: {x: -81.84391, y: 431.3653}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+    - rid: 7446224173759725573
+      type: {class: WallGrabNode, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 0c626b515be165740b3393284a438507
+        position: {x: 246.66507, y: 431.3653}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animName: wallGrab

@@ -13,11 +13,5 @@ public class XInputNode : ConditionNode
         inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
-    protected override bool CheckCondition()
-    {
-        var normInputX = inputHandler.NormInputX;
-        Debug.Log($"XInputNode normInputX: {normInputX}");
-
-        return normInputX == -1 || normInputX == 1;
-    }
+    protected override bool CheckCondition() => inputHandler.NormInputX != 0;
 }

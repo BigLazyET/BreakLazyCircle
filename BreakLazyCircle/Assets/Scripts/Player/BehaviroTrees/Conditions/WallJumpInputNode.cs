@@ -1,27 +1,25 @@
 using BreakLazyCircle.CoreSystem;
 using TheKiwiCoder;
-using UnityEngine;
 
 [System.Serializable]
-public class TouchingWallNode : ConditionNode
+public class WallJumpInputNode : ConditionNode
 {
     private Core core;
-    private Movement movement;
     private CollisionSenses collisionSenses;
+    private PlayerInputHandler inputHandler;
 
     protected override void OnStart()
     {
-        Debug.Log("TouchingWallNode OnStart");
         base.OnStart();
 
         core ??= context.transform.GetComponentInChildren<Core>();
-        movement ??= core.GetCoreComponent<Movement>();
         collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
+        inputHandler ??= context.transform.GetComponent<PlayerInputHandler>();
     }
 
     protected override bool CheckCondition()
     {
-        Debug.Log($"collisionSenses.IsWallFront: {collisionSenses.IsWallFront}");
-        return collisionSenses.IsWallFront;
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        return inputHandler.JumpInput && jumpLeft > 0 && !collisionSenses.IsCeiling;
     }
 }

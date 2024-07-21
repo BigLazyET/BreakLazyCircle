@@ -11,7 +11,6 @@ public class ExtActionNode : ActionNode
     protected Movement movement;
     protected PlayerInputHandler inputHandler;
 
-
     protected override void OnStart()
     {
         core ??= context.transform.GetComponentInChildren<Core>();

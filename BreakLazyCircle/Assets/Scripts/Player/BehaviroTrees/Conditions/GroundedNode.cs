@@ -1,6 +1,7 @@
 using BreakLazyCircle.CoreSystem;
 using System;
 using TheKiwiCoder;
+using UnityEngine;
 
 [System.Serializable]
 public class GroundedNode : ConditionNode
@@ -32,6 +33,7 @@ public class GroundedNode : ConditionNode
             }
             if (inputHandler.NormInputX == 0)
                 movement.SetVelocityX(0f);
+            blackboard.SetValue("grabHoldPosition", Vector3.zero);
         }
         return isGrounded;
     }

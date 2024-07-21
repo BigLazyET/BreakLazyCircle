@@ -5,10 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class GroundedJumpInputNode : ConditionNode
 {
-    private PlayerInputHandler inputHandler;
-
     private Core core;
     private CollisionSenses collisionSenses;
+    private PlayerInputHandler inputHandler;
 
     protected override void OnStart()
     {

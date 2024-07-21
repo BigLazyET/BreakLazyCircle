@@ -20,6 +20,7 @@ public class InAirNode : ExtActionNode
         context.animator.SetFloat("xVelocity", Mathf.Abs(movement.CurrentVelocity.x));
         context.animator.SetFloat("yVelocity", movement.CurrentVelocity.y);
         blackboard.SetValue("inAirLastVelocity", movement.CurrentVelocity);
+        blackboard.SetValue("grabHoldPosition", Vector3.zero);
 
         var isJumpingStage = blackboard.GetValue<bool>("isJumpingStage");
         if (isJumpingStage)

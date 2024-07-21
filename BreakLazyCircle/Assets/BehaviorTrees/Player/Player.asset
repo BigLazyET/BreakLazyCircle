@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 7446224069450793052
   - rid: 6759590064706289779
   - rid: 7446224093520592981
+  - rid: 7446224173759725574
   blackboard:
     keys:
     - rid: 7446224036561944576
@@ -26,8 +27,9 @@ MonoBehaviour:
     - rid: 7446224094767874126
     - rid: 6759590087078183012
     - rid: 7446224154582319266
-  viewPosition: {x: 400.5, y: 99, z: 0}
-  viewScale: {x: 0.43232757, y: 0.43232757, z: 1}
+    - rid: 7446224173819494499
+  viewPosition: {x: 436, y: -22, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
@@ -36,7 +38,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 25e6461aed77f6d4dab55c49dddc55c9
-        position: {x: -555, y: 450}
+        position: {x: -405, y: 450}
         blackboard:
           keys: []
         description: 
@@ -86,6 +88,7 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 6759590064706289779
+        - rid: 7446224173759725574
         - rid: 7446224093520592981
     - rid: 7446224093520592981
       type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
@@ -112,3 +115,22 @@ MonoBehaviour:
         typeName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
         value: {x: 0, y: 0}
+    - rid: 7446224173759725574
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 16a7da274a547a240bf9c4a345e759c5
+        position: {x: -90, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: 72ba7470ecb5bce44a2e75be5b015f36, type: 2}
+        treeInstance: {fileID: 0}
+    - rid: 7446224173819494499
+      type: {class: Vector3Key, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: grabHoldPosition
+        typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {x: 0, y: 0, z: 0}
