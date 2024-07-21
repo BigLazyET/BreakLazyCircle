@@ -10,20 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: Movement
+  m_Name: Grounded
   m_EditorClassIdentifier: 
   rootNode:
     rid: 6759589770224205908
   nodes:
   - rid: 6759589770224205908
   - rid: 6759589907250544721
-  - rid: 6759589907250544722
-  - rid: 6759589907250544724
-  - rid: 6759589907250544726
-  - rid: 6759589907250544727
-  - rid: 6759589907250544729
-  - rid: 6759589907250544731
-  - rid: 6759589907250544733
   - rid: 7446223992868831304
   - rid: 7446223992868831305
   - rid: 7446223992868831306
@@ -47,12 +40,11 @@ MonoBehaviour:
   - rid: 7446224154582319228
   - rid: 7446224162651897960
   - rid: 7446224162651897961
-  - rid: 7446224162651897962
   - rid: 7446224162651897963
   blackboard:
     keys: []
-  viewPosition: {x: 671, y: 256, z: 0}
-  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  viewPosition: {x: 471.5, y: 8.5, z: 0}
+  viewScale: {x: 0.2842624, y: 0.2842624, z: 1}
   references:
     version: 2
     RefIds:
@@ -81,89 +73,6 @@ MonoBehaviour:
         children:
         - rid: 7446223992868831304
         - rid: 7446223992868831319
-    - rid: 6759589907250544722
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 4f9a850fa9243c14e977f4c2c56256fb
-        position: {x: -1800, y: 675}
-        blackboard:
-          keys: []
-        description: TouchingCeiling
-        drawGizmos: 0
-        children:
-        - rid: 6759589907250544724
-        - rid: 6759589907250544726
-    - rid: 6759589907250544724
-      type: {class: TouchingCeilingNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: a1ce9fd135d52864c8b55b376ad1e3d5
-        position: {x: -2055, y: 900}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        invert: 0
-    - rid: 6759589907250544726
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 705b220f75f556e4e89e54a6cc582230
-        position: {x: -1770, y: 900}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759589907250544727
-        - rid: 6759589907250544733
-    - rid: 6759589907250544727
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: d210d12d2c600d54f95750ee723bbafe
-        position: {x: -1995, y: 1125}
-        blackboard:
-          keys: []
-        description: xInput
-        drawGizmos: 0
-        children:
-        - rid: 6759589907250544729
-        - rid: 6759589907250544731
-    - rid: 6759589907250544729
-      type: {class: XInputNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 915e0c67677243b439dc608d7b544d22
-        position: {x: -2160, y: 1350}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        invert: 0
-    - rid: 6759589907250544731
-      type: {class: CrouchMoveNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 3bc1ef307e0171c409929f4bec79b233
-        position: {x: -1950, y: 1350}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        animName: 
-    - rid: 6759589907250544733
-      type: {class: CrouchIdleNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: dcd0f2123e8884b41bc630d8216a5c26
-        position: {x: -1740, y: 1125}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        animName: 
     - rid: 7446223992868831304
       type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -226,7 +135,6 @@ MonoBehaviour:
         description: CrouchInput
         drawGizmos: 0
         children:
-        - rid: 7446224162651897962
         - rid: 7446223992868831311
         - rid: 7446223992868831312
     - rid: 7446223992868831311
@@ -275,9 +183,9 @@ MonoBehaviour:
 '
         drawGizmos: 0
         children:
+        - rid: 7446224162651897963
         - rid: 7446223994435141717
         - rid: 7446223994435141718
-        - rid: 7446224162651897963
     - rid: 7446223992868831319
       type: {class: IdleNode, ns: , asm: Assembly-CSharp}
       data:
@@ -437,17 +345,6 @@ MonoBehaviour:
         started: 0
         guid: 177b735dda11356429721afeb90a2437
         position: {x: -1026, y: 448.5}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        invert: 0
-    - rid: 7446224162651897962
-      type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: ec56dca46bdf4ba45ab61ee3f5a9cf22
-        position: {x: -972, y: 1347.5}
         blackboard:
           keys: []
         description: 
