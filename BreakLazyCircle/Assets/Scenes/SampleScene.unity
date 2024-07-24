@@ -513,7 +513,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.15
+  orthographic size: 4.821429
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1044,6 +1044,7 @@ GameObject:
   - component: {fileID: 1376773474}
   - component: {fileID: 1376773478}
   - component: {fileID: 1376773479}
+  - component: {fileID: 1376773480}
   m_Layer: 11
   m_Name: Foo
   m_TagString: Untagged
@@ -1267,6 +1268,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a28f9f1390745439434e22b5cbc164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1376773480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376773472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourTree: {fileID: 11400000, guid: 0a4792df839438548b152188228e3803, type: 2}
+  tickMode: 2
+  startMode: 3
+  validate: 1
+  blackboardOverrides: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1532196157
 GameObject:
   m_ObjectHideFlags: 0

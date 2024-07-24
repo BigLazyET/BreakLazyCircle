@@ -16,21 +16,21 @@ MonoBehaviour:
     rid: 7446224093520592974
   nodes:
   - rid: 7446224093520592974
-  - rid: 7446224093520592975
   - rid: 7446224093520592977
   - rid: 7446224093520592979
   - rid: 7446224093520592980
   - rid: 6759590087078183000
   - rid: 6759590087078183001
-  - rid: 7446224173819494539
   - rid: 7446224173819494541
-  - rid: 7446224173819494542
-  - rid: 7446224173819494543
-  - rid: 7446224173819494544
+  - rid: 6759590223564243015
+  - rid: 6759590223564243016
+  - rid: 6759590223564243017
+  - rid: 6759590223564243018
+  - rid: 6759590223564243019
   blackboard:
     keys: []
-  viewPosition: {x: 498.5, y: 115.5, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+  viewPosition: {x: 720, y: 264, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -62,6 +62,71 @@ MonoBehaviour:
           reference:
             rid: -2
           defaultValue: {fileID: 11400000, guid: 1b364a5c36ed3fa4f929993657698801, type: 2}
+    - rid: 6759590223564243015
+      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 9ecb1f8c45683e34a803797361decddf
+        position: {x: -375, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590223564243016
+        - rid: 7446224093520592977
+    - rid: 6759590223564243016
+      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 3b2cf9f8a9f194346bbe6fe3c3a7e2ec
+        position: {x: -735, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224173819494541
+        - rid: 6759590223564243017
+    - rid: 6759590223564243017
+      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 326bf6aea1b41f440889c0efd61a529a
+        position: {x: -580.19495, y: 231.27501}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590223564243018
+        - rid: 6759590223564243019
+    - rid: 6759590223564243018
+      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 6c0a4e9ce80ecd844867e9cf25601dac
+        position: {x: -720, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224093520592979
+        - rid: 7446224093520592980
+    - rid: 6759590223564243019
+      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 67256aa8a6cbe1e45ac4bf295c7f2ba7
+        position: {x: -210, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590087078183000
+        - rid: 6759590087078183001
     - rid: 7446224093520592974
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -73,20 +138,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 7446224093520592975
-    - rid: 7446224093520592975
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: be0e2a41deb3831488299388c15d5e34
-        position: {x: -375, y: -225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224173819494539
-        - rid: 7446224093520592977
+          rid: 6759590223564243015
     - rid: 7446224093520592977
       type: {class: InAirNode, ns: , asm: Assembly-CSharp}
       data:
@@ -120,19 +172,6 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         animName: inAir
-    - rid: 7446224173819494539
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 65c7f266bddac994d856dae76baff99a
-        position: {x: -750, y: 0}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224173819494541
-        - rid: 7446224173819494542
     - rid: 7446224173819494541
       type: {class: IsInputEnableNode, ns: , asm: Assembly-CSharp}
       data:
@@ -144,42 +183,3 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         invert: 0
-    - rid: 7446224173819494542
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 4bcca3d278f940e43a9fe0d33a933f1b
-        position: {x: -555, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224173819494543
-        - rid: 7446224173819494544
-    - rid: 7446224173819494543
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 13c189805150a464e9a45118fa3a7538
-        position: {x: -720, y: 450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224093520592979
-        - rid: 7446224093520592980
-    - rid: 7446224173819494544
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: b5c1df97c187fe947bfc83f3d2bf9687
-        position: {x: -195, y: 450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590087078183000
-        - rid: 6759590087078183001

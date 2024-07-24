@@ -16,10 +16,10 @@ MonoBehaviour:
     rid: 7446223994126598216
   nodes:
   - rid: 7446223994126598216
-  - rid: 7446224069450793052
   - rid: 6759590064706289779
   - rid: 7446224093520592981
   - rid: 7446224173759725574
+  - rid: 6759590223564243020
   blackboard:
     keys:
     - rid: 7446224036561944576
@@ -44,6 +44,20 @@ MonoBehaviour:
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
         treeInstance: {fileID: 0}
+    - rid: 6759590223564243020
+      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 147caeb98d2a0b6479bf03896054626b
+        position: {x: -195, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590064706289779
+        - rid: 7446224173759725574
+        - rid: 7446224093520592981
     - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -55,7 +69,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 7446224069450793052
+          rid: 6759590223564243020
     - rid: 7446224036561944576
       type: {class: PlayerDataKey, ns: , asm: Assembly-CSharp}
       data:
@@ -69,20 +83,6 @@ MonoBehaviour:
         name: currentAnimName
         typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
         value: 
-    - rid: 7446224069450793052
-      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 1fd08144bec682a469aaf1c1bfeb29d1
-        position: {x: -195, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590064706289779
-        - rid: 7446224173759725574
-        - rid: 7446224093520592981
     - rid: 7446224093520592981
       type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
       data:
