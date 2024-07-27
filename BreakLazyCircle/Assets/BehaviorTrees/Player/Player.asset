@@ -19,7 +19,7 @@ MonoBehaviour:
   - rid: 6759590064706289779
   - rid: 7446224093520592981
   - rid: 7446224173759725574
-  - rid: 6759590223564243020
+  - rid: 7446224320463110214
   blackboard:
     keys:
     - rid: 7446224036561944576
@@ -27,8 +27,8 @@ MonoBehaviour:
     - rid: 7446224094767874126
     - rid: 7446224154582319266
     - rid: 7446224173819494499
-  viewPosition: {x: 342.5, y: 65.5, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 76.5, y: 183.5, z: 0}
+  viewScale: {x: 0.375937, y: 0.375937, z: 1}
   references:
     version: 2
     RefIds:
@@ -37,39 +37,25 @@ MonoBehaviour:
       data:
         started: 0
         guid: 25e6461aed77f6d4dab55c49dddc55c9
-        position: {x: -405, y: 450}
+        position: {x: 0, y: 225}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
         treeInstance: {fileID: 0}
-    - rid: 6759590223564243020
-      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 147caeb98d2a0b6479bf03896054626b
-        position: {x: -195, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590064706289779
-        - rid: 7446224173759725574
-        - rid: 7446224093520592981
     - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         started: 0
         guid: e2e87cd8-0266-4ec4-94a6-88f096c83831
-        position: {x: -195, y: 0}
+        position: {x: 255, y: -225}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: 6759590223564243020
+          rid: 7446224320463110214
     - rid: 7446224036561944576
       type: {class: PlayerDataKey, ns: , asm: Assembly-CSharp}
       data:
@@ -88,7 +74,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 5347f0b5b27a6af48871c552bfabcb9c
-        position: {x: 195, y: 450}
+        position: {x: 510, y: 225}
         blackboard:
           keys: []
         description: 
@@ -113,7 +99,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 16a7da274a547a240bf9c4a345e759c5
-        position: {x: -90, y: 450}
+        position: {x: 255, y: 225}
         blackboard:
           keys: []
         description: 
@@ -127,3 +113,17 @@ MonoBehaviour:
         typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
         value: {x: 0, y: 0, z: 0}
+    - rid: 7446224320463110214
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 1d1723e41f7346e45bc803b56adc73b5
+        position: {x: 255, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6759590064706289779
+        - rid: 7446224173759725574
+        - rid: 7446224093520592981

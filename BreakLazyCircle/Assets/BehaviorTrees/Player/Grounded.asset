@@ -31,20 +31,20 @@ MonoBehaviour:
   - rid: 7446224162651897960
   - rid: 7446224162651897961
   - rid: 7446224162651897963
-  - rid: 6759590223564243021
-  - rid: 6759590223564243022
-  - rid: 6759590223564243023
-  - rid: 6759590223564243024
-  - rid: 6759590223564243025
-  - rid: 6759590223564243026
-  - rid: 6759590223564243027
-  - rid: 6759590223564243028
-  - rid: 6759590223564243029
-  - rid: 6759590223564243030
+  - rid: 7446224322390392904
+  - rid: 7446224322390392905
+  - rid: 7446224322390392906
+  - rid: 7446224322390392907
+  - rid: 7446224322390392908
+  - rid: 7446224322390392909
+  - rid: 7446224322390392910
+  - rid: 7446224322390392911
+  - rid: 7446224322390392912
+  - rid: 7446224322390392913
   blackboard:
     keys: []
-  viewPosition: {x: 930, y: 233, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 487.5, y: 132, z: 0}
+  viewScale: {x: 0.2842624, y: 0.2842624, z: 1}
   references:
     version: 2
     RefIds:
@@ -59,141 +59,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 6759590223564243021
-    - rid: 6759590223564243021
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 00355950c9a7fd24a88f2a4dc600fc2f
-        position: {x: -720, y: -225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224093520592968
-        - rid: 6759590223564243022
-    - rid: 6759590223564243022
-      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 0a9cd37f9d30e904bbf32de66e223f43
-        position: {x: -510, y: 0}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590223564243023
-        - rid: 6759590223564243024
-        - rid: 6759590223564243025
-    - rid: 6759590223564243023
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: c0f9e3370c713f74aabab4bdd0b2c6d2
-        position: {x: -1425, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224154582319227
-        - rid: 7446224154582319228
-    - rid: 6759590223564243024
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 02a98b3c38c16d545ac4bb8668a83440
-        position: {x: -780, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224162651897961
-        - rid: 7446224093520592971
-        - rid: 7446224093520592972
-    - rid: 6759590223564243025
-      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: d55b96475df5f0e4fb21786529b6898e
-        position: {x: -315, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590223564243026
-        - rid: 7446223992868831319
-    - rid: 6759590223564243026
-      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 76f08d9900e419c4da4dd539eaef34e7
-        position: {x: -345, y: 450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590223564243027
-        - rid: 6759590223564243028
-    - rid: 6759590223564243027
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: fbb49a5d23f02af4eab0dfa600e0d03c
-        position: {x: -465, y: 675}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224162651897960
-        - rid: 7446223992868831306
-        - rid: 6759590223564243029
-    - rid: 6759590223564243028
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: afd536a142b804f4f9dc4d1968fe6ab7
-        position: {x: 120, y: 675}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446224162651897963
-        - rid: 7446223994435141717
-        - rid: 7446223994435141718
-    - rid: 6759590223564243029
-      type: {class: ExtSelector, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 49de5f1cbe59310439d336ebf0011e4d
-        position: {x: -360, y: 900}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 6759590223564243030
-        - rid: 7446223992868831314
-    - rid: 6759590223564243030
-      type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 57e1d6e9dd972884a80e41ab92a8763f
-        position: {x: -585, y: 1125}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 7446223992868831311
-        - rid: 7446223992868831312
+          rid: 7446224322390392913
     - rid: 7446223992868831306
       type: {class: XInputNode, ns: , asm: Assembly-CSharp}
       data:
@@ -359,3 +225,137 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         invert: 0
+    - rid: 7446224322390392904
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 0dd642784c3d5084bb5d0917e4f1583a
+        position: {x: -600, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446223992868831311
+        - rid: 7446223992868831312
+    - rid: 7446224322390392905
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: d6b1a1fd36a7105428fdbe6d0c4b5ba4
+        position: {x: -375, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224322390392904
+        - rid: 7446223992868831314
+    - rid: 7446224322390392906
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: ac7475d0faf74264dad84ea607167cc2
+        position: {x: 135, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224162651897963
+        - rid: 7446223994435141717
+        - rid: 7446223994435141718
+    - rid: 7446224322390392907
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 2fe54bf37d29e524883f4ff4bb65f537
+        position: {x: -495, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224162651897960
+        - rid: 7446223992868831306
+        - rid: 7446224322390392905
+    - rid: 7446224322390392908
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 6c9da4b3b31fe5747b98251a2fef67da
+        position: {x: -345, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224322390392907
+        - rid: 7446224322390392906
+    - rid: 7446224322390392909
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 6eda856e94f42964e97fd7e69bbbfe90
+        position: {x: -285, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224322390392908
+        - rid: 7446223992868831319
+    - rid: 7446224322390392910
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: b084ccfeefb0eeb43a6cdae9533efb92
+        position: {x: -795, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224162651897961
+        - rid: 7446224093520592971
+        - rid: 7446224093520592972
+    - rid: 7446224322390392911
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 9bff34aa2d59c19408381c23fe493aec
+        position: {x: -540, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224322390392912
+        - rid: 7446224322390392910
+        - rid: 7446224322390392909
+    - rid: 7446224322390392912
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 3bf2b1c5da73ccf478b34bbf2b74f674
+        position: {x: -1440, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224154582319227
+        - rid: 7446224154582319228
+    - rid: 7446224322390392913
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: df919dada3292b349803727578b8ba2a
+        position: {x: -720, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 7446224093520592968
+        - rid: 7446224322390392911

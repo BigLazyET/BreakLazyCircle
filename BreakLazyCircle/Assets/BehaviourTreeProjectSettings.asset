@@ -21,3 +21,7 @@ MonoBehaviour:
   gridSnapSizeX: 15
   gridSnapSizeY: 225
   autoSelectNodeHierarchy: 0
+  windowState:
+    activeTabs:
+    - {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
+    activeTabIndex: 0
