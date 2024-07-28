@@ -24,4 +24,6 @@ MonoBehaviour:
   windowState:
     activeTabs:
     - {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
-    activeTabIndex: 0
+    - {fileID: 11400000, guid: c1a395dfda5d2e049b8dda6b9c2b12ef, type: 2}
+    - {fileID: 11400000, guid: ba6b6bfbe1e0c2a4aa67ef9f231b3e81, type: 2}
+    activeTabIndex: 1
