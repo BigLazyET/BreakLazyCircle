@@ -59,8 +59,7 @@ namespace BreakLazyCircle.Util
 
             targetPosition.x =
                Mathf.Max(Mathf.Min(player.transform.position.x, borderMax.x - 9.0f), borderMin.x + 9.0f);
-            targetPosition.y = Mathf.Min(Mathf.Max(player.transform.position.y + verticalOffset, borderMin.y + 10.0f),
-                borderMax.y - 5.0f);
+            targetPosition.y = player.transform.position.y;
 
             MoveQuickToTarget();
         }
