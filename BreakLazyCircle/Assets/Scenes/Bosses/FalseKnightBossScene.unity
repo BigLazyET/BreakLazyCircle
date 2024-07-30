@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 55146059}
   - component: {fileID: 55146060}
   - component: {fileID: 55146061}
+  - component: {fileID: 55146062}
   m_Layer: 15
   m_Name: False Knight
   m_TagString: Untagged
@@ -230,6 +231,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &55146062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55146058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f43e3d6b72f32e46a0033d32e9e2aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructableData: {fileID: 11400000, guid: 04c4cd2f04152aa4d9b711710a0d1f6d, type: 2}
 --- !u!1 &141069382
 GameObject:
   m_ObjectHideFlags: 0
