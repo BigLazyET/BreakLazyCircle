@@ -1,40 +1,29 @@
-using BreakLazyCircle.Combat;
+using Combat;
+using BreakLazyCircle.CoreSystem;
 using UnityEngine;
 
 namespace BreakLazyCircle.Bosses
 {
-    public class FalseKnight : MonoBehaviour, IDestructable
+    /// <summary>
+    /// 假骑士
+    /// </summary>
+    public class FalseKnight : MonoBehaviour, IAttackable
     {
-        [SerializeField]
-        private DestructableData destructableData;
-
-        public DestructableData DestructableData
-        {
-            get => destructableData;
-            set => destructableData = value;
-        }
-
-        private int currentHealth;
-        private bool invincible;
+        private Core core;
+        private Hittable hittable;
+        private Damagable damageable;
 
         private void Awake()
         {
-            currentHealth = destructableData.Health;
-            invincible = destructableData.Invincible;
+            core = GetComponentInChildren<Core>();
+            hittable = core.GetCoreComponent<Hittable>();
+            damageable = core.GetCoreComponent<Damagable>();
         }
 
-        public void DealDamage(int damage)
+        public void OnAttacked(Vector2 hitPosition, Vector2 force, float damage)
         {
-            DestructableData.CurrentHealth -= damage;
-            if (DestructableData.CurrentHealth <= 0)
-            {
-                
-            }
-        }
-
-        public void Revive()
-        {
-            currentHealth = destructableData.Health;
+            hittable.OnAttackHit(hitPosition, force);
+            damageable.OnAttackDamage(damage);
         }
     }
 }

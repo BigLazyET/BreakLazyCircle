@@ -1,4 +1,5 @@
 using BreakLazyCircle.Character;
+using Pixelplacement;
 using UnityEngine;
 
 namespace BreakLazyCircle.Util
@@ -75,6 +76,11 @@ namespace BreakLazyCircle.Util
                 Mathf.SmoothStep(cameraTarget.position.x, targetPosition.x, Time.deltaTime * scrollSpeed),
                 Mathf.SmoothStep(cameraTarget.position.y, targetPosition.y, Time.deltaTime * scrollSpeed),
                 cameraTarget.position.z);
+        }
+
+        public void ShakeCamera(float strength, float duration = 1.0f)
+        {
+            Tween.Shake(transform, transform.localPosition, new Vector3(strength, strength, 0), duration, 0);
         }
     }
 }
