@@ -252,7 +252,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55146058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
   m_Name: 
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   attackEventConfDic:
     keys: 00000000
     values:
-    - attackEventData: {fileID: 0}
+    - attackEventData: {fileID: 11400000, guid: ed74d151465d9e0409faa68ef09dc9de, type: 2}
       attackCollider: {fileID: 1843455215}
       impactTransform: {fileID: 1125401772}
 --- !u!1 &2030771006
