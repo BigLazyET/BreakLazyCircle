@@ -4,6 +4,7 @@ using UnityEngine;
 using Pixelplacement;
 using System.Collections;
 using BreakLazyCircle.Util;
+using System.Collections.Generic;
 
 namespace BreakLazyCircle.CoreSystem
 {
@@ -13,10 +14,12 @@ namespace BreakLazyCircle.CoreSystem
         private float baseScale;
         protected Color defaultColor = Color.white;
         private Material defaultMaterial;
-        private IHitTypeData[] hitTypes;
+        private IEnumerable<IHitTypeData> hitTypes;
         private Transform roleTransform;
 
-        [field: SerializeField] public HittableData HittableData { get; }
+        [field: SerializeField] public HittableData HittableData { get; private set; }
+
+        public Transform spriteTransform;
 
         public event Action<Vector2, Vector2> OnHit;
 
@@ -27,12 +30,13 @@ namespace BreakLazyCircle.CoreSystem
             roleTransform = core.Root.transform;
             baseScale = roleTransform.localScale.y;
 
-            // Find all child sprite renderers
-            var spriteTransform = HittableData.SpriteTransform != null ? HittableData.SpriteTransform : roleTransform;
-            spriteRenderer = spriteTransform.GetComponentInChildren<SpriteRenderer>();
+            if (spriteTransform != null)
+                spriteRenderer = spriteTransform.GetComponentInChildren<SpriteRenderer>();
+            else
+                spriteRenderer = roleTransform.GetComponentInChildren<SpriteRenderer>();
             defaultMaterial = spriteRenderer.material;
 
-            hitTypes = HittableData.HitTypes;
+            hitTypes = HittableData.HitTypeDatas;
         }
 
         public void OnAttackHit(Vector2 position, Vector2 force)

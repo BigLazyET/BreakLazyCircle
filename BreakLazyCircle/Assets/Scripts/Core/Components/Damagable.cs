@@ -6,7 +6,7 @@ namespace Combat
 {
     public class Damagable : CoreComponent, IDamagable
     {
-        [field: SerializeField] public DamagableData DamagableData { get; }
+        [field: SerializeField] public DamagableData DamagableData { get; private set; }
 
         private float health;
         private bool isvincible;

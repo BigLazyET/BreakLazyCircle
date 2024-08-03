@@ -1,5 +1,4 @@
 using BreakLazyCircle.Util;
-using Combat;
 using Serializers;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,31 +20,32 @@ namespace BreakLazyCircle.Bosses
         // 快速攻击：Quick Attack
         // 全图攻击：Area-wide Attack 或 Global Attack
         // 魔法攻击：Magic Attac
-        public SerializableDictionary<string, AttackEventData> attackEventDataConf;
+        public SerializableDictionary<FKAttackType, AttackEventConf> attackEventConfDic;
 
-        private IDictionary<string, AttackEventData> attackEventDatas;
+        private IDictionary<FKAttackType, AttackEventConf> attackEventConfs;
 
         private void Start()
         {
-            attackEventDatas = attackEventDataConf.ToDictionary();
+            attackEventConfs = attackEventConfDic.ToDictionary();
         }
 
-        private void OnAttackStart(string attackType)
+        private void OnAttackStart(FKAttackType attackType)
         {
-            if (!attackEventDatas.ContainsKey(attackType)) return;
-            var attackEventData = attackEventDatas[attackType];
+            if (!attackEventConfs.ContainsKey(attackType)) return;
+            var attackEventConf = attackEventConfs[attackType];
+            var attackEventData = attackEventConf.attackEventData;
 
-            attackEventData.attackCollider.enabled = true;
-            EffectManager.Instance.PlayParticleOneShot(attackEventData.impactEffect, attackEventData.impactTransform.position);
+            attackEventConf.attackCollider.enabled = true;
+            EffectManager.Instance.PlayParticleOneShot(attackEventData.impactEffect, attackEventConf.impactTransform.position);
             CameraController.Instance.ShakeCamera(attackEventData.cameraShakeIntensity);
         }
 
-        private void OnAttackEnd(string attackType)
+        private void OnAttackEnd(FKAttackType attackType)
         {
-            if (!attackEventDatas.ContainsKey(attackType)) return;
-            var attackEventData = attackEventDatas[attackType];
+            if (!attackEventConfs.ContainsKey(attackType)) return;
+            var attackEventConf = attackEventConfs[attackType];
 
-            attackEventData.attackCollider.enabled = false;
+            attackEventConf.attackCollider.enabled = false;
         }
     }
 }

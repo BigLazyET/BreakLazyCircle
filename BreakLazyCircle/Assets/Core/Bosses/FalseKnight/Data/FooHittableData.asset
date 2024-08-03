@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e3e820e019e8541b3294f357fc84b0, type: 3}
   m_Name: FooHittableData
   m_EditorClassIdentifier: 
-  <HitType>k__BackingField: 0
+  hitTypeDatas:
+  - hitTypeData: {fileID: 11400000, guid: 3aa6e34540a726c45b8a6ed2c50499ee, type: 2}
+  - hitTypeData: {fileID: 11400000, guid: 5f5030bf5cf2e6b419804a81b52d61a1, type: 2}
+  - hitTypeData: {fileID: 11400000, guid: 31d45a17dab992249bc9734b6310fd3e, type: 2}
   <DisableHitEffect>k__BackingField: 0
-  <SpriteParent>k__BackingField: {fileID: 0}
   <CustomHitEffect>k__BackingField: {fileID: 0}
   <CustomHitSound>k__BackingField: {fileID: 0}
   <HideWhenDead>k__BackingField: 0
-  <HitMaterial>k__BackingField: {fileID: 0}
