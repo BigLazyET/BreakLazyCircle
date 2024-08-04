@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: FK_BT
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 429284596867399777
+  nodes:
+  - rid: 429284596867399777
+  - rid: 429284603731640397
+  - rid: 429284603731640398
+  - rid: 429284617513599529
+  - rid: 429284617513599530
+  - rid: 429284617513599534
+  - rid: 429284617513599536
+  - rid: 429284617513599537
+  - rid: 429284617513599538
+  - rid: 429284627129040974
+  - rid: 429284628273037430
+  - rid: 429284628273037439
+  blackboard:
+    keys:
+    - rid: 429284617513599543
+  viewPosition: {x: 805, y: 199, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 429284596867399777
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 666f5c47-9aa0-4fe9-b5b7-6e1d270af960
+        position: {x: -330, y: -450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 429284603731640397
+    - rid: 429284603731640397
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 0045cf180d3a13b45a3e94a9efafd81e
+        position: {x: -330, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284603731640398
+        - rid: 429284627129040974
+        - rid: 429284628273037439
+        - rid: 429284628273037430
+        - rid: 429284617513599530
+        - rid: 429284617513599529
+        - rid: 429284617513599534
+    - rid: 429284603731640398
+      type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 4c60a3bfc63003443861176b3ae79c33
+        position: {x: -1455, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284617513599529
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 926e87e83c1386f428429a92ae38e4f0
+        position: {x: -465, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 2
+    - rid: 429284617513599530
+      type: {class: InitBoss, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 2743b2e186cbdb041ba55cf06f63fa3a
+        position: {x: -630, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284617513599531
+      type: {class: StringKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: bossName
+        typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: False Knight
+    - rid: 429284617513599534
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 0fdb2053ce6bf8644a1a7f19871d68eb
+        position: {x: -300, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 429284617513599536
+        restartOnSuccess: 1
+        restartOnFailure: 1
+        maxRepeats: 0
+    - rid: 429284617513599536
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: e331893f084b2a24391fa510cd93a71e
+        position: {x: -315, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284617513599537
+        - rid: 429284617513599538
+    - rid: 429284617513599537
+      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 0ed660f843be6bb4aba4cfbe137e9f8c
+        position: {x: -540, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        message:
+          reference:
+            rid: 429284617513599531
+          defaultValue: hei hello i am foo
+    - rid: 429284617513599538
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5dd69d9818c0d694b96e010e0f21c46f
+        position: {x: -315, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 5
+    - rid: 429284617513599543
+      type: {class: StringKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: bossName
+        typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: False Knight
+    - rid: 429284627129040974
+      type: {class: FK_InAir, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 95b82b880c788d347bf9b7c398774c8a
+        position: {x: -1290, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Jump
+    - rid: 429284628273037430
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 0e8824c9acb48184296d8c1a94041c63
+        position: {x: -795, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Idle
+        duration: 0.417
+    - rid: 429284628273037439
+      type: {class: FK_Land, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 13872bd2b9da1874b88419a210797adc
+        position: {x: -1065, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Land
+        duration: 1
+        intensity: 0.5

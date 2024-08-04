@@ -1,0 +1,26 @@
+using CoreSystem;
+using TheKiwiCoder;
+using UnityEngine;
+
+[System.Serializable]
+public class InAirJumpNode : ExtActionNode
+{
+    private PlayerData playerData;
+
+    protected override void OnStart()
+    {
+        base.OnStart();
+
+        playerData ??= blackboard.GetValue<PlayerData>("playerData");
+
+        inputHandler.ConsumeJumpInput();
+        var jumpLeft = blackboard.GetValue<int>("amountOfJumpLeft");
+        blackboard.SetValue("amountOfJumpLeft", --jumpLeft);
+    }
+
+    protected override State OnUpdate()
+    {
+        movement.SetVelocityY(playerData.jumpVelocity);
+        return State.Success;
+    }
+}

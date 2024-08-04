@@ -16,10 +16,10 @@ MonoBehaviour:
     rid: 7446223994126598216
   nodes:
   - rid: 7446223994126598216
-  - rid: 6759590064706289779
-  - rid: 7446224093520592981
-  - rid: 7446224173759725574
   - rid: 7446224320463110214
+  - rid: 429284596867399782
+  - rid: 429284596867399783
+  - rid: 429284596867399784
   blackboard:
     keys:
     - rid: 7446224036561944576
@@ -27,22 +27,46 @@ MonoBehaviour:
     - rid: 7446224094767874126
     - rid: 7446224154582319266
     - rid: 7446224173819494499
-  viewPosition: {x: 287, y: 218, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+  viewPosition: {x: 82.5, y: 200, z: 0}
+  viewScale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 6759590064706289779
+    - rid: 429284596867399782
       type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
       data:
         started: 0
-        guid: 25e6461aed77f6d4dab55c49dddc55c9
-        position: {x: 0, y: 225}
+        guid: 945efaaffc8e57a479ffc39e15c273a9
+        position: {x: -150, y: 225}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         treeAsset: {fileID: 11400000, guid: 0d4e88913fa8ad24d8de7a432827dcf4, type: 2}
+        treeInstance: {fileID: 0}
+    - rid: 429284596867399783
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 46a5832b10e20204896194945ec1885a
+        position: {x: 90, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: 72ba7470ecb5bce44a2e75be5b015f36, type: 2}
+        treeInstance: {fileID: 0}
+    - rid: 429284596867399784
+      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 61bbbdc33cccecc41b4dc12841e43c11
+        position: {x: 300, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        treeAsset: {fileID: 11400000, guid: ba6b6bfbe1e0c2a4aa67ef9f231b3e81, type: 2}
         treeInstance: {fileID: 0}
     - rid: 7446223994126598216
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
@@ -69,18 +93,6 @@ MonoBehaviour:
         name: currentAnimName
         typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
         value: 
-    - rid: 7446224093520592981
-      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 5347f0b5b27a6af48871c552bfabcb9c
-        position: {x: 510, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        treeAsset: {fileID: 11400000, guid: ba6b6bfbe1e0c2a4aa67ef9f231b3e81, type: 2}
-        treeInstance: {fileID: 0}
     - rid: 7446224094767874126
       type: {class: IntKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -94,18 +106,6 @@ MonoBehaviour:
         typeName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
         value: {x: 0, y: 0}
-    - rid: 7446224173759725574
-      type: {class: ExtSubTree, ns: , asm: Assembly-CSharp}
-      data:
-        started: 0
-        guid: 16a7da274a547a240bf9c4a345e759c5
-        position: {x: 255, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        treeAsset: {fileID: 11400000, guid: 72ba7470ecb5bce44a2e75be5b015f36, type: 2}
-        treeInstance: {fileID: 0}
     - rid: 7446224173819494499
       type: {class: Vector3Key, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -124,6 +124,6 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
-        - rid: 6759590064706289779
-        - rid: 7446224173759725574
-        - rid: 7446224093520592981
+        - rid: 429284596867399782
+        - rid: 429284596867399783
+        - rid: 429284596867399784
