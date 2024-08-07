@@ -7,11 +7,8 @@ namespace Combat
     public class Damagable : CoreComponent, IDamagable
     {
         [field: SerializeField] public DamagableData DamagableData { get; private set; }
-
-        private float health;
-        private bool isvincible;
-
-        public float CurrentHealth { get; set; }
+        [field: SerializeField] public float CurrentHealth { get; set; }
+        [field: SerializeField] public bool Invincible { get; set; }
 
         public event Action OnDamage;
         public event Action OnDestroyed;
@@ -20,15 +17,12 @@ namespace Combat
         {
             base.Awake();
 
-            health = DamagableData.Health;
-            isvincible = DamagableData.Invincible;
-
-            CurrentHealth = health;
+            CurrentHealth = DamagableData.Health;
         }
 
         public void OnAttackDamage(float damage)
         {
-            if (isvincible) return;
+            if (Invincible) return;
 
             // TODO: damage modifier buff system
             CurrentHealth -= damage;
@@ -38,6 +32,6 @@ namespace Combat
                 OnDestroyed?.Invoke();
         }
 
-        public void Revive() => CurrentHealth = health;
+        public void Revive() => CurrentHealth = DamagableData.Health;
     }
 }

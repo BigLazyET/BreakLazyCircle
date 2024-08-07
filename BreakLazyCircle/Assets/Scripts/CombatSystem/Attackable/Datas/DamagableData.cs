@@ -6,7 +6,5 @@ namespace Combat
     public class DamagableData : ScriptableObject
     {
         [field: SerializeField] public int Health { get; set; }
-        [field: SerializeField] public int CurrentHealth { get; set; }
-        [field: SerializeField] public bool Invincible { get; set; }
     }
 }
