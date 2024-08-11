@@ -11,6 +11,8 @@ namespace AIShared
         private Core core;
         private Damagable damagable;
 
+        public float healthThresold;
+
         protected override void OnStart()
         {
             base.OnStart();
@@ -21,7 +23,6 @@ namespace AIShared
 
         protected override bool CheckCondition()
         {
-            var healthThresold = blackboard.GetValue<float>("healthThresold");
             return damagable.CurrentHealth < healthThresold;
         }
     }

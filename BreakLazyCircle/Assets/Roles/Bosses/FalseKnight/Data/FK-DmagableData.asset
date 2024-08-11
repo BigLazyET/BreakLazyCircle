@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b71e2dfd3a1d4d24fade0797f6685b2b, type: 3}
-  m_Name: newHitTypeInflatData
+  m_Script: {fileID: 11500000, guid: 0ca3f9e8b4bfb534a9e7eacfe09e5f9b, type: 3}
+  m_Name: FK-DmagableData
   m_EditorClassIdentifier: 
-  <XScale>k__BackingField: 0
-  <YScale>k__BackingField: 0
-  <ZScale>k__BackingField: 0
+  <Health>k__BackingField: 40

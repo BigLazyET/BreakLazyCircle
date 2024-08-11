@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803c7265a7014df4e9fa82eb8db17a8a, type: 3}
-  m_Name: newHitTypeColorData
+  m_Name: FK-HitTypeColorData
   m_EditorClassIdentifier: 
-  <HitMaterial>k__BackingField: {fileID: 0}
+  <HitMaterial>k__BackingField: {fileID: 2100000, guid: d28059583e1a40249ad8daa3586d8028, type: 2}
+  <IsRecoveryBack>k__BackingField: 0
+  <Duration>k__BackingField: 0.2
+  <Delay>k__BackingField: 0

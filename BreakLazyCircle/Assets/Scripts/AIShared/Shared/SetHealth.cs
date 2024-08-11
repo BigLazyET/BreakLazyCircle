@@ -11,6 +11,8 @@ namespace AIShared
         private Core core;
         private Damagable damagable;
 
+        public float health;
+
         protected override void OnStart()
         {
             core ??= context.transform.GetComponentInChildren<Core>();
@@ -24,8 +26,7 @@ namespace AIShared
 
         protected override State OnUpdate()
         {
-            // TODO: blackboard-health
-            damagable.CurrentHealth = blackboard.GetValue<float>("health");
+            damagable.CurrentHealth = health;
             return State.Success;
         }
     }

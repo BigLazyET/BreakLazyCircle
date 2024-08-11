@@ -21,20 +21,47 @@ MonoBehaviour:
   - rid: 429284617513599529
   - rid: 429284617513599530
   - rid: 429284617513599534
-  - rid: 429284617513599536
-  - rid: 429284617513599537
-  - rid: 429284617513599538
   - rid: 429284627129040974
   - rid: 429284628273037430
   - rid: 429284628273037439
+  - rid: 429284778890756166
+  - rid: 429284778890756167
+  - rid: 429284778890756168
+  - rid: 429284778890756172
+  - rid: 429284778890756173
+  - rid: 429284778890756174
+  - rid: 429284778890756176
+  - rid: 429284778890756177
+  - rid: 429284779329585224
+  - rid: 429284779329585249
+  - rid: 429284779329585252
+  - rid: 429284779329585255
+  - rid: 429284779329585268
+  - rid: 429284779329585270
+  - rid: 429284779329585666
+  - rid: 429284779329585667
+  - rid: 429284779329585668
+  - rid: 429284779329585894
+  - rid: 429284779329585895
+  - rid: 429284779329585896
+  - rid: 429284779329585897
+  - rid: 429284779329586085
+  - rid: 429284779329586086
+  - rid: 429284779329586087
+  - rid: 429284779329586088
+  - rid: 429284779329586089
+  - rid: 429284779329586092
   blackboard:
     keys:
     - rid: 429284617513599543
-  viewPosition: {x: 352.5, y: 146, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+    - rid: 429284779329585253
+  viewPosition: {x: 158, y: -124.5, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 429284596867399777
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -96,12 +123,6 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
-    - rid: 429284617513599531
-      type: {class: StringKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        name: bossName
-        typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        value: False Knight
     - rid: 429284617513599534
       type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -113,48 +134,10 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 429284617513599536
+          rid: 429284778890756166
         restartOnSuccess: 1
         restartOnFailure: 1
         maxRepeats: 0
-    - rid: 429284617513599536
-      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: e331893f084b2a24391fa510cd93a71e
-        position: {x: -315, y: 225}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 429284617513599537
-        - rid: 429284617513599538
-    - rid: 429284617513599537
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 0ed660f843be6bb4aba4cfbe137e9f8c
-        position: {x: -540, y: 450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        message:
-          reference:
-            rid: 429284617513599531
-          defaultValue: hei hello i am foo
-    - rid: 429284617513599538
-      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 5dd69d9818c0d694b96e010e0f21c46f
-        position: {x: -315, y: 450}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        duration: 5
     - rid: 429284617513599543
       type: {class: StringKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -197,3 +180,357 @@ MonoBehaviour:
         animationTriggerName: Land
         duration: 1
         intensity: 0.5
+    - rid: 429284778890756166
+      type: {class: COSelector, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 78a24f2116eee1343b0f09fd548efa09
+        position: {x: -300, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284778890756167
+        - rid: 429284779329585270
+        - rid: 429284779329585895
+    - rid: 429284778890756167
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 63265d2689e17de4d848405c45edeb39
+        position: {x: -1155, y: 450}
+        blackboard:
+          keys: []
+        description: Recovery
+        drawGizmos: 0
+        children:
+        - rid: 429284778890756168
+        - rid: 429284778890756172
+    - rid: 429284778890756168
+      type: {class: IsHealthUnder, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 5db2235d85d5aeb43b3864d0cf48fc45
+        position: {x: -1395, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+        healthThresold: 10
+    - rid: 429284778890756172
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 445bc8cf92de59e4089061d10d01ea2d
+        position: {x: -1125, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284778890756173
+        - rid: 429284778890756174
+        - rid: 429284778890756176
+        - rid: 429284778890756177
+        - rid: 429284779329585268
+        - rid: 429284779329585224
+        - rid: 429284779329585252
+        - rid: 429284779329585249
+        - rid: 429284779329585255
+    - rid: 429284778890756173
+      type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: bf80c8d01467b3d4aa2e08ad429943af
+        position: {x: -1485, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284778890756174
+      type: {class: FreezeTime, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 006b91273d797064ba87a6356f324007
+        position: {x: -1320, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        freezeDuration: 0.03
+    - rid: 429284778890756176
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: d816d768aca6ccc4fb2b1404a7aad71e
+        position: {x: -1170, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Roll
+        duration: 0.75
+    - rid: 429284778890756177
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 4faa19ad33122ab40a06c684465331a2
+        position: {x: -1020, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Roll Idle
+        duration: 0.25
+    - rid: 429284779329585224
+      type: {class: FK_SpawnMaggot, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: b34eeaceb4fadd248a48d5fa9b9ffdaf
+        position: {x: -705, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        maggotPrefab: {fileID: 8719687877901103028, guid: bfc0a6ef6957cf34388a26cecb23aacf, type: 3}
+    - rid: 429284779329585249
+      type: {class: SetHealth, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: df689388df845254f8c2dc357c0d82b7
+        position: {x: -375, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        health: 40
+    - rid: 429284779329585252
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 38e7b76b750908b4ab47c06e511fa52c
+        position: {x: -525, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Recover
+        duration: 0.3
+    - rid: 429284779329585253
+      type: {class: IntKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: currentStage
+        typeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 1
+    - rid: 429284779329585255
+      type: {class: GoToNextStage, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 8c8da85898b58f240a8ac43525bc0ee0
+        position: {x: -225, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284779329585268
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 9751abc41831b2342b045911480579a2
+        position: {x: -870, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 0.3
+    - rid: 429284779329585270
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 2a818d821ef8e814dafdca14dcd0fb4c
+        position: {x: -675, y: 450}
+        blackboard:
+          keys: []
+        description: Death
+        drawGizmos: 0
+        children:
+        - rid: 429284779329585666
+        - rid: 429284779329585667
+        - rid: 429284779329585668
+        - rid: 429284779329585894
+    - rid: 429284779329585666
+      type: {class: IntCompare, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: ec6a310285929744a89022f0238d7fca
+        position: {x: -915, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        invert: 0
+        operation: 4
+        op1:
+          reference:
+            rid: 429284779329585253
+          defaultValue: 0
+        op2:
+          reference:
+            rid: -2
+          defaultValue: 3
+    - rid: 429284779329585667
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: ba5687a9ffa33d847aab40b495b16ea4
+        position: {x: -750, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Dead
+        duration: 0.23
+    - rid: 429284779329585668
+      type: {class: DestroySelf, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 50ca5447378bec840bc8ac7f4e6bfa97
+        position: {x: -585, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        bleedTime: 2
+        bleedEffect: {fileID: 7914164315856010337, guid: 6b719ea77a6d83843b170507c7333a7c, type: 3}
+        explodeEffect: {fileID: 346676228444729687, guid: 8e07d73b1080951408e6e474cf243f0c, type: 3}
+    - rid: 429284779329585894
+      type: {class: IdleIcon, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 1572d9085ffabe7478ba291d705ec42e
+        position: {x: -420, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        idleIcon: {fileID: -7796288195538296903, guid: e0b8e6ed8149c074ab7db5e2eb1813d3, type: 3}
+    - rid: 429284779329585895
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: e0357858a0b97b04080ddec5d0b16630
+        position: {x: 315, y: 450}
+        blackboard:
+          keys: []
+        description: Fight Loop
+        drawGizmos: 0
+        child:
+          rid: 429284779329585896
+        restartOnSuccess: 1
+        restartOnFailure: 1
+        maxRepeats: 0
+    - rid: 429284779329585896
+      type: {class: StageBasedSelector, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 5b064e8c382920c49b84bf0b1d84a2ae
+        position: {x: 300, y: 675}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284779329585897
+        - rid: 429284779329586088
+        seed: 0
+        useSeed: 0
+        includedTasksPerStage:
+        - 0
+        - 0,2
+        - 0,1,2,3
+    - rid: 429284779329585897
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 13bb62387285fea43af6ec68c2d14182
+        position: {x: -15, y: 900}
+        blackboard:
+          keys: []
+        description: Jump
+        drawGizmos: 0
+        children:
+        - rid: 429284779329586085
+        - rid: 429284779329586086
+        - rid: 429284779329586087
+    - rid: 429284779329586085
+      type: {class: FK_Jump, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 270b1dcfa0cc8e04bb078acdc89f6d64
+        position: {x: -330, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        horizontalForce: 5
+        jumpForce: 10
+        buildupTime: 0
+        jumpTime: 0
+        animationTriggerName: 
+        shakeCameraOnLanding: 0
+    - rid: 429284779329586086
+      type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: f421a3bd1d60ceb4fb24a326e421a296
+        position: {x: -165, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284779329586087
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: e3dfc4800123f2444a9f4c0fa8072310
+        position: {x: 0, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 1
+    - rid: 429284779329586088
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 27fb47e7a86a8aa45bd0536f90f233f4
+        position: {x: 285, y: 900}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284779329586089
+        - rid: 429284779329586092
+    - rid: 429284779329586089
+      type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: cba6fd29bc6a62a4f884d7eb0a44157c
+        position: {x: 165, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 429284779329586092
+      type: {class: FK_SpawnFallRocks, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: e8f09f519dfd93d45821a3ef6790bc17
+        position: {x: 315, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0

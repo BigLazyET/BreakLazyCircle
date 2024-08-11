@@ -18,7 +18,6 @@ namespace AIShared
 
         protected override State OnUpdate()
         {
-            // TODO: blackboard-currentStage
             var currentStage = blackboard.GetValue<int>("currentStage");
             blackboard.SetValue("currentStage", ++currentStage);
             return State.Success;

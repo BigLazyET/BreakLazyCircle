@@ -17,21 +17,27 @@ MonoBehaviour:
   nodes:
   - rid: 6759590223564243035
   - rid: 6759590223564243036
-  - rid: 6759590223564243037
-  - rid: 6759590223564243038
-  - rid: 6759590223564243039
-  - rid: 6759590223564243040
-  - rid: 6759590223564243041
-  - rid: 6759590223564243044
+  - rid: 429284779329585241
   blackboard:
     keys: []
-  viewPosition: {x: 509, y: 267, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 0, y: 0, z: 0}
+  viewScale: {x: 0.25, y: 0.25, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 429284779329585241
+      type: {class: FooAction, ns: Assets.Foo, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: f51d5ce48691d3a49b60dedf68c57a07
+        position: {x: -255, y: 225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        <Transform>k__BackingField: {fileID: 0}
+        maggotTransform: {fileID: 0}
+        falseKnightTransform: {fileID: 0}
     - rid: 6759590223564243035
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -43,7 +49,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 6759590223564243044
+          rid: 6759590223564243036
     - rid: 6759590223564243036
       type: {class: ExtSequencer, ns: , asm: Assembly-CSharp}
       data:
@@ -54,84 +60,5 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
-        children: []
-    - rid: 6759590223564243037
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 2531f8d3e6741de408910d7cd20fd799
-        position: {x: -490, y: 207}
-        blackboard:
-          keys: []
-        description: i am first 1
-        drawGizmos: 0
-        message:
-          reference:
-            rid: -2
-          defaultValue: i am first 1
-    - rid: 6759590223564243038
-      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 03f5582d692836042b6ed467896f9930
-        position: {x: -331, y: 208}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        duration: 3
-    - rid: 6759590223564243039
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 75a0a51b55d7cbb4db335a358a7f0e20
-        position: {x: -176, y: 211}
-        blackboard:
-          keys: []
-        description: i am second 2
-        drawGizmos: 0
-        message:
-          reference:
-            rid: -2
-          defaultValue: i am second 2
-    - rid: 6759590223564243040
-      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: e358ba5cf539c394baeb9ec17d436dbe
-        position: {x: -9, y: 212}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        duration: 2
-    - rid: 6759590223564243041
-      type: {class: Log, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: e3d359faa9a7814498c868de99a75b37
-        position: {x: 164.3996, y: 212}
-        blackboard:
-          keys: []
-        description: i am third 3
-        drawGizmos: 0
-        message:
-          reference:
-            rid: -2
-          defaultValue: i am third 3
-    - rid: 6759590223564243044
-      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        started: 0
-        guid: 9fe08afe04f5b1d4c8801882fc82901f
-        position: {x: -90, y: 0}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
         children:
-        - rid: 6759590223564243037
-        - rid: 6759590223564243038
-        - rid: 6759590223564243039
-        - rid: 6759590223564243040
-        - rid: 6759590223564243041
+        - rid: 429284779329585241

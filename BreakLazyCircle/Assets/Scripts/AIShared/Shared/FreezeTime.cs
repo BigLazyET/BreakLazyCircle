@@ -7,6 +7,8 @@ namespace AIShared
     [Serializable]
     public class FreezeTime : ActionNode
     {
+        public float freezeDuration;
+
         protected override void OnStart()
         {
             
@@ -19,9 +21,7 @@ namespace AIShared
 
         protected override State OnUpdate()
         {
-            // TODO: blackboard-freezeTime
-            var freezeTime = blackboard.GetValue<float>("freezeTime");
-            GameManager.Instance.FreezeTime(freezeTime);
+            GameManager.Instance.FreezeTime(freezeDuration);
             return State.Success;
         }
     }

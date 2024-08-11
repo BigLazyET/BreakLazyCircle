@@ -7,7 +7,7 @@ using UnityEngine;
 namespace FalseKnight.AI
 {
     [Serializable]
-    public class Jump : EnemyAction
+    public class FK_Jump : EnemyAction
     {
         public float horizontalForce = 5.0f;
         public float jumpForce = 10.0f;
