@@ -44,12 +44,17 @@ namespace CoreSystem
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-            Gizmos.DrawWireSphere(ceilingCheck.position, groundCheckRadius); 
+            if (groundCheck != null)
+                Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+            if (ceilingCheck != null)
+                Gizmos.DrawWireSphere(ceilingCheck.position, groundCheckRadius); 
 
-            Gizmos.color = Color.red;
-            gizmosWorkspace.Set(wallCheckDistance, 0);  // 不全面，应该要考虑 Movement.FacingDirection
-            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)gizmosWorkspace);
+            if (wallCheck != null)
+            {
+                Gizmos.color = Color.red;
+                gizmosWorkspace.Set(wallCheckDistance, 0);  // 不全面，应该要考虑 Movement.FacingDirection
+                Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)gizmosWorkspace);
+            }
         }
     }
 }
