@@ -1,6 +1,7 @@
+using ProjectileSystem;
 using UnityEngine;
 
-namespace ProjectileSystem
+namespace FalseKnight.Projectile
 {
     public class FKShockwave : AbstractProjectile
     {
