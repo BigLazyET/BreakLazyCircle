@@ -51,11 +51,18 @@ MonoBehaviour:
   - rid: 429284779329586088
   - rid: 429284779329586089
   - rid: 429284779329586092
+  - rid: 3120958552662343757
+  - rid: 3120958552662343758
+  - rid: 3120958552662343759
+  - rid: 3120958552662343760
+  - rid: 3120958552662343761
+  - rid: 3120958552662343762
+  - rid: 3120958552662343763
   blackboard:
     keys:
     - rid: 429284617513599543
     - rid: 429284779329585253
-  viewPosition: {x: 158, y: -124.5, z: 0}
+  viewPosition: {x: 169, y: -249, z: 0}
   viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
@@ -444,6 +451,7 @@ MonoBehaviour:
         children:
         - rid: 429284779329585897
         - rid: 429284779329586088
+        - rid: 3120958552662343763
         seed: 0
         useSeed: 0
         includedTasksPerStage:
@@ -506,14 +514,16 @@ MonoBehaviour:
       data:
         started: 0
         guid: 27fb47e7a86a8aa45bd0536f90f233f4
-        position: {x: 285, y: 900}
+        position: {x: 375, y: 900}
         blackboard:
           keys: []
-        description: 
+        description: Rampage Attack
         drawGizmos: 0
         children:
         - rid: 429284779329586089
         - rid: 429284779329586092
+        - rid: 3120958552662343757
+        - rid: 3120958552662343762
     - rid: 429284779329586089
       type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
       data:
@@ -534,3 +544,90 @@ MonoBehaviour:
           keys: []
         description: 
         drawGizmos: 0
+        rockPrefab: {fileID: 6318573477009361480, guid: 4e8e060c8e62f214b855a6a5717bf368, type: 3}
+        spawnRockCount: 4
+        spawnInterval: 0.3
+    - rid: 3120958552662343757
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 1ef70c7455392774f96425ce555c2727
+        position: {x: 525, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 3120958552662343758
+        restartOnSuccess: 0
+        restartOnFailure: 1
+        maxRepeats: 8
+    - rid: 3120958552662343758
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5bed9ba821cb8854ea49c84fdf0f0963
+        position: {x: 525, y: 1350}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 3120958552662343759
+        - rid: 3120958552662343760
+        - rid: 3120958552662343761
+    - rid: 3120958552662343759
+      type: {class: PlayAnimation, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 44912d20e9800494f85e74c25db2f8cc
+        position: {x: 285, y: 1575}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Attack
+        duration: 0.23
+    - rid: 3120958552662343760
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 1cd81b0066753d443af4adab8fb4fe89
+        position: {x: 525, y: 1575}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 0.5
+    - rid: 3120958552662343761
+      type: {class: TurnAround, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 15d14416926f9e247993ec8ed4ab39c6
+        position: {x: 765, y: 1575}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 3120958552662343762
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 4bb5687171233124180ea09b0c4a7d0a
+        position: {x: 690, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 2
+    - rid: 3120958552662343763
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: b5a0c43b2b6256340bc9b33a8f857900
+        position: {x: 990, y: 900}
+        blackboard:
+          keys: []
+        description: Smash Shockwave
+        drawGizmos: 0
+        children: []

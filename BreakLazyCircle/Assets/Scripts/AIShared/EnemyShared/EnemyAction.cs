@@ -1,3 +1,4 @@
+using BreakLazyCircle.Bosses;
 using BreakLazyCircle.Character;
 using CoreSystem;
 using System;
@@ -14,6 +15,7 @@ namespace Combat.Enemy.AI
         protected CollisionSenses collisionSenses;
         protected Player player;
         protected Animator animator;
+        protected FKConnector connector;
 
         protected override void OnStart()
         {
@@ -22,6 +24,7 @@ namespace Combat.Enemy.AI
             collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
             player ??= Player.Instance;
             animator ??= context.transform.GetComponentInChildren<Animator>();
+            connector ??= context.transform.GetComponent<FKConnector>();
         }
 
         protected override void OnStop()
