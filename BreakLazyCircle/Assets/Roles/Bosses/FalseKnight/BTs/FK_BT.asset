@@ -64,11 +64,23 @@ MonoBehaviour:
   - rid: 429284831285215235
   - rid: 429284831285215236
   - rid: 429284831285215309
+  - rid: 3120958575184445512
+  - rid: 3120958575184445513
+  - rid: 3120958575184445514
+  - rid: 3120958575184445515
+  - rid: 3120958575184445518
+  - rid: 3120958575184445519
+  - rid: 3120958575184445521
+  - rid: 3120958575184445523
+  - rid: 3120958575184445524
+  - rid: 3120958575184445525
+  - rid: 3120958575184445531
+  - rid: 3120958575184445532
   blackboard:
     keys:
     - rid: 429284617513599543
     - rid: 429284779329585253
-  viewPosition: {x: -815.5, y: -539, z: 0}
+  viewPosition: {x: -38, y: -708, z: 0}
   viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
@@ -434,7 +446,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: e0357858a0b97b04080ddec5d0b16630
-        position: {x: 315, y: 450}
+        position: {x: 855, y: 450}
         blackboard:
           keys: []
         description: Fight Loop
@@ -449,7 +461,7 @@ MonoBehaviour:
       data:
         started: 0
         guid: 5b064e8c382920c49b84bf0b1d84a2ae
-        position: {x: 300, y: 675}
+        position: {x: 840, y: 675}
         blackboard:
           keys: []
         description: 
@@ -457,13 +469,11 @@ MonoBehaviour:
         children:
         - rid: 429284779329585897
         - rid: 429284779329586088
-        - rid: 3120958552662343763
         seed: 0
         useSeed: 0
         includedTasksPerStage:
         - 0
-        - 0,2
-        - 0,1,2,3
+        - 0,1
     - rid: 429284779329585897
       type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -478,22 +488,22 @@ MonoBehaviour:
         - rid: 429284779329586085
         - rid: 429284779329586086
         - rid: 429284779329586087
+        - rid: 3120958575184445531
+        - rid: 3120958575184445532
     - rid: 429284779329586085
       type: {class: FK_Jump, ns: FalseKnight.AI, asm: Assembly-CSharp}
       data:
         started: 0
         guid: 270b1dcfa0cc8e04bb078acdc89f6d64
-        position: {x: -330, y: 1125}
+        position: {x: -630, y: 1125}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         horizontalForce: 5
         jumpForce: 10
-        buildupTime: 0
-        jumpTime: 0
-        animationTriggerName: 
-        shakeCameraOnLanding: 0
+        buildupTime: 0.2
+        animationTriggerName: Start Jump
     - rid: 429284779329586086
       type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
       data:
@@ -614,16 +624,16 @@ MonoBehaviour:
       data:
         started: 0
         guid: 849d3c7f1a3deb142b6d594d87234c00
-        position: {x: 1605, y: 1125}
+        position: {x: 1590, y: 1125}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         fKShootWeapons:
-        - projectilePrefab: {fileID: 0}
-          horizontalForce: 0
+        - projectilePrefab: {fileID: 6587425717762879319, guid: 70d7451e259b47b4e9019d410af4d1f2, type: 3}
+          horizontalForce: 1
           verticalForce: 0
-        shakeCamera: 0
+        shakeCamera: 1
     - rid: 3120958552662343757
       type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -714,3 +724,154 @@ MonoBehaviour:
         - rid: 429284831285215235
         - rid: 429284831285215236
         - rid: 429284831285215309
+        - rid: 3120958575184445512
+        - rid: 3120958575184445513
+    - rid: 3120958575184445512
+      type: {class: FK_SpawnFallRocks, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 4f59f49a93aee1c418b8b2739184b4a0
+        position: {x: 1740, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        rockPrefab: {fileID: 6318573477009361480, guid: 4e8e060c8e62f214b855a6a5717bf368, type: 3}
+        spawnRockCount: 4
+        spawnInterval: 0.3
+    - rid: 3120958575184445513
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: f38afc97bb8a95742ae6ddf026dc6339
+        position: {x: 1935, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 2
+    - rid: 3120958575184445514
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 5fde14edce64dcf49997c4db5dfe9da1
+        position: {x: 2355, y: 900}
+        blackboard:
+          keys: []
+        description: Jump Attack
+        drawGizmos: 0
+        children:
+        - rid: 3120958575184445515
+        - rid: 3120958575184445519
+        - rid: 3120958575184445518
+        - rid: 3120958575184445521
+        - rid: 3120958575184445523
+        - rid: 3120958575184445524
+        - rid: 3120958575184445525
+    - rid: 3120958575184445515
+      type: {class: FacePalyer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: d4208c3c1e6b3834cbdead8a1ee63c6b
+        position: {x: 2130, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 3120958575184445518
+      type: {class: FK_InAir, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 704cf5d40acedca48bb570de0e03e334
+        position: {x: 2430, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Jump
+    - rid: 3120958575184445519
+      type: {class: FK_Jump, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 9a0e7d21e5ba754489c8f935f2a05feb
+        position: {x: 2280, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        horizontalForce: 5
+        jumpForce: 10
+        buildupTime: 0
+        animationTriggerName: Start Jump
+    - rid: 3120958575184445521
+      type: {class: FK_Land, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 954903bc5e8a2b6479ed1f9361349577
+        position: {x: 2580, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Land
+        duration: 1
+        intensity: 0.5
+    - rid: 3120958575184445523
+      type: {class: PlayParticle, ns: AIShared, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 647727ee7a3d6f742b25d268d6d9476e
+        position: {x: 2730, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        particle: {fileID: 643766391129198277, guid: cff8acd2ebc679d43b10f19ba65b668d, type: 3}
+    - rid: 3120958575184445524
+      type: {class: FK_SpawnFallRocks, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: ac3e6830997a87b4584a48b1440a0540
+        position: {x: 2880, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        rockPrefab: {fileID: 6318573477009361480, guid: 4e8e060c8e62f214b855a6a5717bf368, type: 3}
+        spawnRockCount: 4
+        spawnInterval: 0.3
+    - rid: 3120958575184445525
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: e83a8d89a53443b4db06955ad65c01d1
+        position: {x: 3075, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 2
+    - rid: 3120958575184445531
+      type: {class: FK_InAir, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: cf9bb873edf44c84cb7734daf52a1cff
+        position: {x: -465, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Jump
+    - rid: 3120958575184445532
+      type: {class: FK_Land, ns: FalseKnight.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: 180b4b4bfc2fe1048a11554c5372f0db
+        position: {x: -315, y: 1125}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        animationTriggerName: Land
+        duration: 1
+        intensity: 0.5
