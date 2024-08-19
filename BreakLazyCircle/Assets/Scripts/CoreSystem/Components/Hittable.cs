@@ -31,7 +31,7 @@ namespace CoreSystem
             baseScale = roleTransform.localScale.y;
 
             if (spriteTransform != null)
-                spriteRenderer = spriteTransform.GetComponentInChildren<SpriteRenderer>();
+                spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
             else
                 spriteRenderer = roleTransform.GetComponentInChildren<SpriteRenderer>();
             defaultMaterial = spriteRenderer.material;

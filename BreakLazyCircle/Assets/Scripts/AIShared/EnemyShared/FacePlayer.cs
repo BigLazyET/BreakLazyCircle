@@ -3,7 +3,7 @@ using System;
 namespace Combat.Enemy.AI
 {
     [Serializable]
-    public class FacePalyer : EnemyAction
+    public class FacePlayer : EnemyAction
     {
         protected override State OnUpdate()
         {

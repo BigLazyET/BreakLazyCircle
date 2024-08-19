@@ -13,33 +13,22 @@ namespace FalseKnight.AI
         public float jumpForce = 10.0f;
 
         public float buildupTime;
+        public float jumpTime;
 
         public string animationTriggerName;
+        public bool shakeCameraOnLanding;
 
-        private bool isAnimationFinish;
+        private bool hasLanded;
 
         private Tween buildupTween;
+        private Tween jumpTween;
 
         protected override void OnStart()
         {
             base.OnStart();
-            isAnimationFinish = false;
 
             buildupTween = DOVirtual.DelayedCall(buildupTime, StartJump, false);
             animator.SetTrigger(animationTriggerName);
-        }
-
-        protected override State OnUpdate()
-        {
-            return isAnimationFinish ? State.Success : State.Running;
-        }
-
-        protected override void OnStop()
-        {   
-            base.OnStop();
-
-            buildupTween?.Kill();
-            isAnimationFinish = true;
         }
 
         private void StartJump()
@@ -47,7 +36,26 @@ namespace FalseKnight.AI
             var direction = player.transform.position.x < context.transform.position.x ? -1 : 1;
             movement.rb2D.AddForce(new Vector2(horizontalForce * direction, jumpForce), ForceMode2D.Impulse);
 
-            isAnimationFinish = true;
+            jumpTween = DOVirtual.DelayedCall(jumpTime, () =>
+            {
+                hasLanded = true;
+                if (shakeCameraOnLanding)
+                    CameraController.Instance.ShakeCamera(0.5f);
+            }, false);
+        }
+
+        protected override State OnUpdate()
+        {
+            return hasLanded ? State.Success : State.Running;
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+
+            buildupTween?.Kill();
+            jumpTween?.Kill();
+            hasLanded = false;
         }
     }
 }

@@ -22,15 +22,12 @@ namespace FalseKnight.AI
 
         protected override State OnUpdate()
         {
-            Debug.Log("FK_SpawnFallRocks OnUpdate start");
             var sequence = DOTween.Sequence();
             for (int i = 0; i < spawnRockCount; ++i)
             {
-                Debug.Log($"FK_SpawnFallRocks OnUpdate {i}");
                 sequence.AppendCallback(SpawnRock);
                 sequence.AppendInterval(spawnInterval);
             }
-            Debug.Log("FK_SpawnFallRocks OnUpdate end");
             return State.Success;
         }
 
@@ -38,6 +35,8 @@ namespace FalseKnight.AI
         {
             var randomX = Random.Range(spawnRocksAreaCollider.bounds.min.x, spawnRocksAreaCollider.bounds.max.x);
             var rock = Object.Instantiate(rockPrefab, new Vector2(randomX, spawnRocksAreaCollider.bounds.min.y), Quaternion.identity);
+            Debug.Log($"spawn falling rocks shooter: {context.gameObject.name}");
+            rock.Shooter = context.gameObject;
             rock.SetForce(Vector2.zero);
         }
     }

@@ -1,3 +1,4 @@
+using BreakLazyCircle.Character;
 using ProjectileSystem;
 using UnityEngine;
 
@@ -25,6 +26,20 @@ namespace FalseKnight.Projectile
         {
             velocity += direction * speed * Time.deltaTime;
             transform.position += velocity * Time.deltaTime;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log($"FKShockwave OnTriggerEnter2D gameobject name: {collision.gameObject.name}");
+
+            var player = collision.GetComponent<Player>();
+            if (player != null)
+            {
+                var force = this.force.normalized;
+                // TODO: 数据ScriptableObject
+                player.OnAttacked(collision.transform.position, force * 300f, damage);
+                DestroyProjectile();
+            }
         }
     }
 }

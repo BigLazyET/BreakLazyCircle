@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: FK_BT
+  m_Name: FK_BT 1
   m_EditorClassIdentifier: 
   rootNode:
     rid: 429284900374315095
@@ -68,12 +68,15 @@ MonoBehaviour:
   - rid: 429284914687377585
   - rid: 429284914687377586
   - rid: 429284914687377587
+  - rid: 429284914687377606
+  - rid: 429284914687377607
+  - rid: 429284914687377611
   blackboard:
     keys:
     - rid: 429284914687377526
     - rid: 429284914687377552
-  viewPosition: {x: -374, y: -669.5, z: 0}
-  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  viewPosition: {x: 251, y: 306, z: 0}
+  viewScale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 2
     RefIds:
@@ -84,13 +87,13 @@ MonoBehaviour:
       data:
         started: 0
         guid: 35c24676-ae41-4a7a-8086-7a87ecd87361
-        position: {x: 0, y: 0}
+        position: {x: -30, y: -675}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: 429284900374315096
+          rid: 429284914687377607
     - rid: 429284900374315096
       type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -667,7 +670,11 @@ MonoBehaviour:
         - projectilePrefab: {fileID: 6587425717762879319, guid: 70d7451e259b47b4e9019d410af4d1f2, type: 3}
           horizontalForce: 1
           verticalForce: 0
-        shakeCamera: 0
+        - projectilePrefab: {fileID: 6318573477009361480, guid: 4e8e060c8e62f214b855a6a5717bf368, type: 3}
+          horizontalForce: 1
+          verticalForce: 0
+        shakeCamera: 1
+        shockwavePrefab: {fileID: 6318573477009361480, guid: 4e8e060c8e62f214b855a6a5717bf368, type: 3}
     - rid: 429284914687377579
       type: {class: FK_SpawnFallRocks, ns: FalseKnight.AI, asm: Assembly-CSharp}
       data:
@@ -769,3 +776,37 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         duration: 2
+    - rid: 429284914687377606
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: 2917507f739f4484a8c7704c103d5405
+        position: {x: 120, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 3
+    - rid: 429284914687377607
+      type: {class: COSequencer, ns: BigLazyET.BT, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        started: 0
+        guid: c5faf65ad454fa64a9ae5938d509104f
+        position: {x: -30, y: -450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 429284914687377611
+        - rid: 429284914687377606
+    - rid: 429284914687377611
+      type: {class: FacePlayer, ns: Combat.Enemy.AI, asm: Assembly-CSharp}
+      data:
+        started: 0
+        guid: e4dbbe50c3f63c641b4ab7d640a65edd
+        position: {x: -495, y: -225}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0

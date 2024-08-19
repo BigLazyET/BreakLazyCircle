@@ -26,7 +26,8 @@ namespace FalseKnight.AI
             foreach (var fkShootWeapon in fKShootWeapons)
             {
                 var projectile = Object.Instantiate(fkShootWeapon.projectilePrefab, weaponTransform.position, Quaternion.identity);
-                projectile.Shooter = context.gameObject;
+                Debug.Log($"shockwave shooter: {context.gameObject.name}");
+                projectile.Shooter = context.gameObject;    // TODO: 到底哪个gameobject
 
                 var force = new Vector2(fkShootWeapon.horizontalForce * context.transform.localScale.x, fkShootWeapon.verticalForce);
                 projectile.SetForce(force);
@@ -34,8 +35,10 @@ namespace FalseKnight.AI
                 if (shakeCamera)
                     CameraController.Instance.ShakeCamera(0.5f);
             }
+            if (shakeCamera)
+                CameraController.Instance.ShakeCamera(0.5f);
 
-            return base.OnUpdate();
+            return State.Success;
         }
     }
 }

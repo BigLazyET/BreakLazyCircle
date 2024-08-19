@@ -1,4 +1,3 @@
-using BreakLazyCircle.Character;
 using BreakLazyCircle.Util;
 using System;
 using UnityEngine;
@@ -28,22 +27,6 @@ namespace ProjectileSystem
             EffectManager.Instance.PlayParticleOneShot(particleEffec, transform.position);
 
             Destroy(gameObject);
-        }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject == Shooter)
-                return;
-
-            var player = collision.GetComponent<Player>();
-            if (player != null)
-            {
-                var force = this.force.normalized;
-                // TODO: 数据ScriptableObject
-                player.OnAttacked(collision.transform.position, force * 300f, damage);
-            }
-
-            DestroyProjectile();
         }
     }
 }
