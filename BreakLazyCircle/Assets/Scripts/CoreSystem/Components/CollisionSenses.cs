@@ -9,11 +9,17 @@ namespace CoreSystem
         [SerializeField] private Transform ceilingCheck;
         [SerializeField] private Transform ledgeHorizontalCheck;
         [SerializeField] private Transform ledgeVerticalCheck;
+        [SerializeField] private Transform playerCheck;
+        [SerializeField] private Transform ledgeCheck;
 
         [SerializeField] private float groundCheckRadius;
         [SerializeField] private float wallCheckDistance;
+        [SerializeField] private float minAgroDistance = 3f;
+        [SerializeField] private float maxAgroDistance = 4f;
+        [SerializeField] private float closeRangeActionDistance = 1f;
 
         [SerializeField] private LayerMask whatIsGround;
+        [SerializeField] private LayerMask whatIsPlayer;
 
         private Movement Movement => core.GetCoreComponent<Movement>();
 
@@ -33,6 +39,15 @@ namespace CoreSystem
         public bool IsLedgeHorizontal => Physics2D.Raycast(ledgeHorizontalCheck.position, Vector2.right * Movement.FacingDirection, wallCheckDistance, whatIsGround);
 
         public bool IsLedgeVertical => Physics2D.Raycast(ledgeVerticalCheck.position, Vector2.down, wallCheckDistance, whatIsGround);
+
+        public bool IsPlayerInMinAgroRange => Physics2D.Raycast(playerCheck.position, transform.right, minAgroDistance, whatIsPlayer);
+
+        public virtual bool IsPlayerInMaxAgroRange => Physics2D.Raycast(playerCheck.position, transform.right, maxAgroDistance, whatIsPlayer);
+
+        /// <summary>
+        /// 是否达到可近战攻击范围
+        /// </summary>
+        public bool IsPlayerInCloseRangeAction => Physics2D.Raycast(playerCheck.position, transform.right, closeRangeActionDistance, whatIsPlayer);
 
         public RaycastHit2D LedgeHitPoint(float xDistance, float offset)
         {

@@ -12,6 +12,11 @@ namespace BreakLazyCircle.Character
 
         public static Player Instance;
 
+        private void Update()
+        {
+            core.LogicUpdate();
+        }
+
         private void Awake()
         {
             Instance ??= this;

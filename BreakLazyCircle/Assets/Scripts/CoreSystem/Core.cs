@@ -16,16 +16,6 @@ namespace CoreSystem
             Root = Root ?? transform.parent.gameObject;
         }
 
-        //private void Update()
-        //{
-        //    LogicUpdate();
-        //}
-
-        private void FixedUpdate()
-        {
-            LogicUpdate();
-        }
-
         public void LogicUpdate()
         {
             foreach (var coreComponent in CoreComponents)
